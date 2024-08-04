@@ -5,17 +5,25 @@ import {
   LockClosedIcon,
   ServerIcon,
   GlobeAltIcon,
+  DevicePhoneMobileIcon,
 } from "@heroicons/react/20/solid";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Icon from "./Assets/App_Icon.png";
-import WebsiteExample from "./DashboardExample.png";
 import HeroExample from "./Assets/Snap_park_hero.png";
 import ExampleSticker from "./Assets/Example_Sticker.png";
 import ExampleSpotPage from "./Assets/SnapPark_Example.png";
 import useMediaQuery from "../../Hooks/MediaQuery";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import {
+  SiTypescript,
+  SiGooglecloud,
+  SiTailwindcss,
+} from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
 
 import SnapparkWebsite from "./SnapparkWebsite";
+import SnapparkApp from "./SnapparkApp";
 
 const images = [
   {
@@ -28,6 +36,16 @@ const images = [
     alt: "An example parking spot webpage.",
     caption: "An example parking spot webpage.",
   },
+];
+
+const stack = [
+  { name: "Typescript", icon: SiTypescript },
+  { name: "Tailwind", icon: SiTailwindcss },
+  { name: "React", icon: FaReact },
+  { name: "React Native", icon: FaReact },
+  { name: "Node.js", icon: FaNodeJs },
+  { name: "GCP", icon: SiGooglecloud },
+  { name: "Firebase", icon: IoLogoFirebase },
 ];
 
 const Slideshow = ({ imageIndex }: { imageIndex: number }) => (
@@ -78,7 +96,7 @@ export default function Snappark() {
   return (
     <>
       <div className="relative isolate overflow-hidden px-6 py-32 lg:px-8">
-        <div className="mx-auto max-w-3xl text-base leading-7 text-gray-200">
+        <div className="mx-auto max-w-3xl 2xl:max-w-4xl text-base leading-7 text-gray-200">
           <div className="inline-flex align-middle justify-center">
             <img
               alt=""
@@ -94,6 +112,17 @@ export default function Snappark() {
             built it to solve a common problem with workplace parking - spot
             availability.
           </p>
+          <div className=" z-10 rounded-xl flex no-scrollbar items-center gap-x-2 overflow-x-scroll  h-[50px]">
+            {stack.map((item, index) => (
+              <span
+                key={index}
+                className="inline-flex items-center rounded-md gap-x-1 bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20 whitespace-nowrap"
+              >
+                <item.icon aria-hidden="true" />
+                {item.name}
+              </span>
+            ))}
+          </div>
           <figure className="mt-16">
             <img
               alt=""
@@ -105,10 +134,10 @@ export default function Snappark() {
                 aria-hidden="true"
                 className="mt-0.5 h-5 w-5 flex-none text-gray-300"
               />
-              The Snap Park Dashboard.
+              The Snap Park Landing page.
             </figcaption>
           </figure>
-          <div className="mt-10 max-w-3xl">
+          <div className="mt-10 max-w-3xl 2xl:max-w-4xl">
             <p>
               At my previous job we had 20 employees who drove to work, and only
               6 available carparks in the office. However, as it was a
@@ -195,17 +224,10 @@ export default function Snappark() {
               each unavailable spot was taken. At midnight local time, a GCP
               cloud function runs that will automatically reset each parking
               spot back to available, ready for the next day.
-              <br />
-              <br />
-              It uses Firebase Authentication, Storage, and Firestore, which are
-              accessed directly on the client side using carefully set rules.
-              All of the source code is available on my Github.
-              <br />
-              <br />
             </p>
             <ul role="list" className="mt-8 space-y-8 text-gray-300">
               <li className="flex gap-x-3">
-                <CloudArrowUpIcon
+                <GlobeAltIcon
                   aria-hidden="true"
                   className="mt-1 h-5 w-5 flex-none text-indigo-600"
                 />
@@ -213,12 +235,14 @@ export default function Snappark() {
                   <strong className="font-semibold text-gray-100">
                     The Main Web App
                   </strong>{" "}
-                  Transfer text, photos, and files, directly in the browser from
-                  any device.
+                  The web application allows employees to interact with the QR
+                  code stickers, such as marking them taken or available. It
+                  also alows companies to monitor the usage and billing across
+                  the month.
                 </span>
               </li>
               <li className="flex gap-x-3">
-                <LockClosedIcon
+                <DevicePhoneMobileIcon
                   aria-hidden="true"
                   className="mt-1 h-5 w-5 flex-none text-indigo-600"
                 />
@@ -226,10 +250,9 @@ export default function Snappark() {
                   <strong className="font-semibold text-gray-100">
                     The Mobile Application
                   </strong>{" "}
-                  Allows you to share photos and files directly from your mobile
-                  device to Cross Copy, skipping the step of having to first
-                  open your mobile browser and select which photos you'd like to
-                  send.
+                  Designed to reduce notification costs, the native application
+                  is intended to provide a more streamlined UI/UX experience for
+                  the employees.
                 </span>
               </li>
               <li className="flex gap-x-3">
@@ -239,16 +262,18 @@ export default function Snappark() {
                 />
                 <span>
                   <strong className="font-semibold text-gray-100">
-                    The Chrome Extension
+                    The backend
                   </strong>{" "}
-                  Again, simply click on the Cross Copy extension icon when
-                  using Chrome to instantly access copied text, files, and
-                  photos.
+                  The Snappark backend is again serverless, but is hosted by a
+                  series of GCP Cloud Functions instead of AWS. While this does
+                  offer some advantages when working with other Google products,
+                  I think I'll stick to AWS from now on.
                 </span>
               </li>
             </ul>
 
             <SnapparkWebsite />
+            <SnapparkApp />
           </div>
         </div>
       </div>

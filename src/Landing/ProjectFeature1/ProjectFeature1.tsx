@@ -2,6 +2,7 @@ import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import SnapDash from "../../assets/Snappark/DashboardExample.png";
 import SnapLogo from "../../assets/Snappark/App_Icon.png";
 import SnapLogo2 from "../../assets/Snappark/SnapParkLogo-01.png";
+import './Features.css'
 
 const ProjectFeature1: React.FC = () => {
   return (
@@ -50,18 +51,18 @@ const ProjectFeature1: React.FC = () => {
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
           <img className="h-11 rounded-xl" src={SnapLogo2} alt="Your Company" />
-          <div className="mt-24 sm:mt-32 lg:mt-16">
-            <div className="inline-flex space-x-1">
-              <span className="rounded-full font-roboto bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
+          <div className="mt-24 sm:mt-32 lg:mt-16 overflow-x-scroll no-scrollbar ">
+            <div className="inline-flex  space-x-1 min-w-[550px]">
+              <span className="rounded-full max-h-[50px] flex items-center font-roboto bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
                 Typescript
               </span>
-              <span className="rounded-full font-roboto bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
+              <span className="rounded-full max-h-[50px] flex items-center font-roboto bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
                 React
               </span>
-              <span className="rounded-full font-roboto bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
+              <span className="rounded-full max-h-[50px] flex items-center font-roboto bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
                 React Native
               </span>
-              <span className="rounded-full font-roboto bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
+              <span className="rounded-full max-h-[50px] flex items-center font-roboto bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
                 NodeJS
               </span>
               <span className="inline-flex items-center space-x-2 text-sm font-medium pl-3 leading-6 text-gray-300">

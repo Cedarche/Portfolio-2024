@@ -12,9 +12,21 @@ import CrossCopyIcon from "./CC_ICON.png";
 import HomepageImage from "./Crosscopy_homepage_1.png";
 import HomepageImage1 from "./CC_homepage.png";
 import Navbar from "../../Landing/Navbar/Navbar";
+import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
+import { SiTypescript, SiStyledcomponents } from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
+import { CgCPlusPlus } from "react-icons/cg";
+
+const stack = [
+  { name: "Typescript", icon: SiTypescript },
+  { name: "Styled Components", icon: SiTypescript },
+  { name: "React", icon: FaReact },
+  { name: "React Native", icon: FaReact },
+  { name: "Node.js", icon: FaNodeJs },
+  { name: "Firebase", icon: IoLogoFirebase },
+];
 
 export default function Crosscopy() {
-  const [open, setOpen] = useState(true);
   return (
     <>
       {/* <Navbar open={open} setOpen={setOpen} /> */}
@@ -37,6 +49,17 @@ export default function Crosscopy() {
             subscriptions, or size limits. This is by far my most used project,
             which myself and hundreds of others use daily.
           </p>
+          <div className=" z-10 rounded-xl flex no-scrollbar items-center gap-x-2 overflow-x-scroll  h-[50px]">
+            {stack.map((item, index) => (
+              <span
+                key={index}
+                className="inline-flex items-center rounded-md gap-x-1 bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20 whitespace-nowrap"
+              >
+                <item.icon aria-hidden="true" />
+                {item.name}
+              </span>
+            ))}
+          </div>
           <figure className="mt-16">
             <img
               alt=""

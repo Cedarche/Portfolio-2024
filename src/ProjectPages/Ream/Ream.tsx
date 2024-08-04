@@ -8,19 +8,30 @@ import {
   DevicePhoneMobileIcon,
   CpuChipIcon,
 } from "@heroicons/react/20/solid";
-import { IoIosGlobe } from "react-icons/io";
 
-import { useState } from "react";
+import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
+import { SiTypescript, SiStyledcomponents } from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
+import { CgCPlusPlus } from "react-icons/cg";
 
 import ReamIconDark from "./Assets/Ream_icon_dark.png";
-import HomepageImage from "./Ream_homepage_1.png";
-import Spline from "@splinetool/react-spline";
 import ReamStatic from "./Assets/Ream_hero_static.png";
 
 import ReamWebsite from "./ReamWebsite";
 import ReamApp from "./Ream-App";
 import ReamTile from "./Ream-Tile";
 import ReamAPI from "./ReamAPI";
+
+const stack = [
+  { name: "Typescript", icon: SiTypescript },
+  { name: "Styled Components", icon: SiTypescript },
+  { name: "C++", icon: CgCPlusPlus },
+  { name: "React", icon: FaReact },
+  { name: "React Native", icon: FaReact },
+  { name: "Node.js", icon: FaNodeJs },
+  { name: "AWS", icon: FaAws },
+  { name: "Firebase", icon: IoLogoFirebase },
+];
 
 // https://ream-1.web.app/receipt/74iUwpl0pjTt9uvva8bH -- Bettys Burger dynamic
 
@@ -44,6 +55,17 @@ export default function Ream2() {
             it I've learnt to use React, React Native, Node.js, PCB design, and
             a range of accessory frameworks.
           </p>
+          <div className=" z-10 rounded-xl flex no-scrollbar items-center gap-x-2 overflow-x-scroll  h-[50px]">
+            {stack.map((item, index) => (
+              <span
+                key={index}
+                className="inline-flex items-center rounded-md gap-x-1 bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20 whitespace-nowrap"
+              >
+                <item.icon aria-hidden="true" />
+                {item.name}
+              </span>
+            ))}
+          </div>
           <figure className="">
             <img
               alt=""
