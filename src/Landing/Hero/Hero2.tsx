@@ -82,10 +82,10 @@ const Hero2: React.FC = () => {
             animate="visible"
             variants={fadeIn}
           >
-            <h1 className="text-4xl font-roboto font-bold tracking-tight text-white sm:text-6xl 2xl:text-8xl">
+            <h1 className="text-4xl  font-bold tracking-tight text-white sm:text-6xl 2xl:text-8xl">
               Hi, I'm Tom.
             </h1>
-            <p className="mt-6 text-lg leading-8 font-roboto text-gray-100 sm:max-w-md lg:max-w-none text-left 2xl:text-2xl">
+            <p className="mt-6 text-lg leading-8 text-gray-100 sm:max-w-md lg:max-w-none text-left 2xl:text-2xl">
               I'm a mechanical engineer by profession, but I love to build
               anything and everything - from software to hardware. Most of my
               projects stay in the development phase indefinitely, however a
@@ -94,7 +94,7 @@ const Hero2: React.FC = () => {
             <div className="mt-10 flex items-center gap-x-6">
               <a
                 href="#"
-                className="rounded-md font-roboto bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400"
+                className="rounded-md bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400"
               >
                 Get in contact
               </a>

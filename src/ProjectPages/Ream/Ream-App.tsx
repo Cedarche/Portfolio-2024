@@ -41,7 +41,7 @@ export default function ReamApp() {
               viewBox="0 0 366 729"
               className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
             >
-              <title>App demo</title>
+              <title>Ream App demo</title>
               <defs>
                 <clipPath id="clipPath">
                   <rect rx={36} width={316} height={684} />

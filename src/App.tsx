@@ -3,6 +3,7 @@ import "./App.css";
 import Landing from "./Landing/Landing";
 import Experience from "./Experience/Experience";
 import Projects from "./ProjectPages/Projects";
+import Contact from "./Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: "/experience",
     element: <Experience />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
   },
   {
     path: "/projects/*",

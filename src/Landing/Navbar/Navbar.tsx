@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-import { Link as RouterLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   Dialog,
@@ -23,7 +23,7 @@ interface NavbarProps {
 }
 
 const headings: Heading[] = [
-  { headingName: "About", link: "/about" },
+  { headingName: "Home", link: "/" },
   { headingName: "Projects", link: "/projects" },
   { headingName: "Experience", link: "/experience" },
   { headingName: "Contact", link: "/contact" },
@@ -66,18 +66,18 @@ const Navbar: React.FC<NavbarProps> = ({ open, setOpen }) => {
         <div className="hidden  relative lg:flex flex-1  p-4 text-white">
           <div className="absolute top-0 right-0 flex p-4 flex-col items-end space-y-2">
             {headings.map((item, index) => (
-              <motion.a
+              <motion.div
                 key={index}
-                href={item.link}
-                className="font-paytone text-lg"
                 initial="hidden"
                 animate="visible"
                 whileHover="hover"
                 variants={fadeIn}
                 custom={index}
               >
-                {item.headingName}
-              </motion.a>
+                <Link to={item.link} className="font-paytone text-lg">
+                  {item.headingName}
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -102,13 +102,13 @@ const Navbar: React.FC<NavbarProps> = ({ open, setOpen }) => {
                       <div className=" relative flex flex-1 h-full p-4 px-8 text-white">
                         <div className="absolute top-0 right-0 flex p-4 flex-col items-end space-y-2">
                           {headings.map((item, index) => (
-                            <a
+                            <Link
                               key={index}
-                              href={item.link}
+                              to={item.link}
                               className="font-playfair text-xl"
                             >
                               {item.headingName}
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       </div>

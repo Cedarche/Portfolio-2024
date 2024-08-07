@@ -8,7 +8,7 @@ import Assetrix from "./Assetrix/Assetrix";
 import Stellarmetrics from "./Stellarmetrics/Stellarmetrics";
 
 import SnapparkIcon from "./Snappark/Assets/App_Icon.png";
-import CrosscopyIcon from "./Crosscopy/CC_ICON.png";
+import CrosscopyIcon from "./Crosscopy/Assets/CC_ICON.png";
 import ReamIcon from "./Ream/Assets/Ream_icon_dark.png"; 
 import AssetrixIcon from "./Assetrix/ATMS_logo_small.png";
 import {

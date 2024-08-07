@@ -76,13 +76,13 @@ export default function Skills() {
     <div className="bg-black py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-base font-roboto font-semibold leading-7 text-green-400">
+          <h2 className="text-base  font-semibold leading-7 text-green-400">
             Skills
           </h2>
-          <p className="mt-2 text-3xl font-roboto font-bold tracking-tight text-white sm:text-4xl">
+          <p className="mt-2 text-3xl  font-bold tracking-tight text-white sm:text-4xl">
             Languages, Tools, & Frameworks
           </p>
-          <p className="mt-6 text-lg font-roboto leading-8 text-gray-300">
+          <p className="mt-6 text-lg  leading-8 text-gray-300">
             I've used a variety of tools and frameworks over the years for both
             personal and commercial use.
           </p>
@@ -92,14 +92,14 @@ export default function Skills() {
             (feature) =>
               feature.name !== "NULL" && (
                 <div key={feature.name} className="relative pl-9">
-                  <dt className="inline font-roboto font-semibold text-white">
+                  <dt className="inline  font-semibold text-white">
                     <feature.icon
                       aria-hidden="true"
                       className="absolute left-1 top-1 h-5 w-5 text-green-500"
                     />
                     {feature.name}
                   </dt>{" "}
-                  <dd className="inline font-roboto">{feature.description}</dd>
+                  <dd className="inline font">{feature.description}</dd>
                   <span className="inline-flex ml-2 items-center rounded-md bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20">
                     {feature.experience} Years
                   </span>

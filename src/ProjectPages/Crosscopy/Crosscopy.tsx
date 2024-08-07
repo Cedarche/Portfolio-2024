@@ -8,17 +8,18 @@ import {
 } from "@heroicons/react/20/solid";
 import { useState } from "react";
 
-import CrossCopyIcon from "./CC_ICON.png";
-import HomepageImage from "./Crosscopy_homepage_1.png";
-import HomepageImage1 from "./CC_homepage.png";
-import Navbar from "../../Landing/Navbar/Navbar";
+import CrossCopyIcon from "./Assets/CC_ICON.png";
+
+import HomepageImage1 from "./Assets/CC_homepage.png";
+
 import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
-import { SiTypescript, SiStyledcomponents } from "react-icons/si";
+import { SiTypescript, SiJavascript, SiStyledcomponents } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
-import { CgCPlusPlus } from "react-icons/cg";
+
+import CrosscopyWeb from "./CrosscopyWeb";
 
 const stack = [
-  { name: "Typescript", icon: SiTypescript },
+  { name: "Javascript", icon: SiJavascript },
   { name: "Styled Components", icon: SiTypescript },
   { name: "React", icon: FaReact },
   { name: "React Native", icon: FaReact },
@@ -31,7 +32,7 @@ export default function Crosscopy() {
     <>
       {/* <Navbar open={open} setOpen={setOpen} /> */}
       <div className="relative isolate overflow-hidden px-6 py-32 lg:px-8">
-        <div className="mx-auto max-w-3xl text-base leading-7 text-gray-200">
+        <div className="mx-auto max-w-3xl 2xl:max-w-4xl text-base leading-7 text-gray-200">
           <div className="inline-flex align-middle justify-center">
             <img
               alt=""
@@ -53,10 +54,10 @@ export default function Crosscopy() {
             {stack.map((item, index) => (
               <span
                 key={index}
-                className="inline-flex items-center rounded-md gap-x-1 bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20 whitespace-nowrap"
+                className="flex items-center rounded-md gap-x-1 bg-green-500/10 px-2 py-1.5 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20 whitespace-nowrap"
               >
                 <item.icon aria-hidden="true" />
-                {item.name}
+                <span className="mt-0.5 ml-0.5">{item.name}</span>
               </span>
             ))}
           </div>
@@ -71,10 +72,10 @@ export default function Crosscopy() {
                 aria-hidden="true"
                 className="mt-0.5 h-5 w-5 flex-none text-gray-300"
               />
-              The Cross Copy homepage.
+              The Cross Copy landing page.
             </figcaption>
           </figure>
-          <div className="mt-10 max-w-3xl">
+          <div className="mt-10">
             <p>
               As with most of my projects, I built Cross Copy to overcome a
               common problem that I encountered at work. Part of my previous job
@@ -153,27 +154,8 @@ export default function Crosscopy() {
                 </span>
               </li>
             </ul>
-
-            <div className="mt-16 max-w-2xl">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-50">
-                Everything you need to get up and running
-              </h2>
-              <p className="mt-6">
-                Purus morbi dignissim senectus mattis adipiscing. Amet, massa
-                quam varius orci dapibus volutpat cras. In amet eu ridiculus leo
-                sodales cursus tristique. Tincidunt sed tempus ut viverra
-                ridiculus non molestie. Gravida quis fringilla amet eget dui
-                tempor dignissim. Facilisis auctor venenatis varius nunc, congue
-                erat ac. Cras fermentum convallis quam.
-              </p>
-              <p className="mt-8">
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                Id dolor praesent donec est. Odio penatibus risus viverra tellus
-                varius sit neque erat velit.
-              </p>
-            </div>
           </div>
+            <CrosscopyWeb />
         </div>
       </div>
     </>

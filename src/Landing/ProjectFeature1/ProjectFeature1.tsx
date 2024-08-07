@@ -53,16 +53,16 @@ const ProjectFeature1: React.FC = () => {
           <img className="h-11 rounded-xl" src={SnapLogo2} alt="Your Company" />
           <div className="mt-24 sm:mt-32 lg:mt-16 overflow-x-scroll no-scrollbar ">
             <div className="inline-flex  space-x-1 min-w-[550px]">
-              <span className="rounded-full max-h-[50px] flex items-center font-roboto bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
+              <span className="rounded-full max-h-[50px] flex items-center  bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
                 Typescript
               </span>
-              <span className="rounded-full max-h-[50px] flex items-center font-roboto bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
+              <span className="rounded-full max-h-[50px] flex items-center  bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
                 React
               </span>
-              <span className="rounded-full max-h-[50px] flex items-center font-roboto bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
+              <span className="rounded-full max-h-[50px] flex items-center  bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
                 React Native
               </span>
-              <span className="rounded-full max-h-[50px] flex items-center font-roboto bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
+              <span className="rounded-full max-h-[50px] flex items-center  bg-green-500/10 px-3 py-1 text-sm font-semibold leading-6 text-green-400 ring-1 ring-inset ring-green-500/20">
                 NodeJS
               </span>
               <span className="inline-flex items-center space-x-2 text-sm font-medium pl-3 leading-6 text-gray-300">
@@ -74,10 +74,10 @@ const ProjectFeature1: React.FC = () => {
               </span>
             </div>
           </div>
-          <h1 className="mt-10 text-4xl font-roboto font-bold tracking-tight text-white sm:text-6xl">
+          <h1 className="mt-10 text-4xl  font-bold tracking-tight text-white sm:text-6xl">
             My latest project: Snap Park
           </h1>
-          <p className="mt-6 text-lg font-roboto leading-8 text-gray-300">
+          <p className="mt-6 text-lg  leading-8 text-gray-300">
             Have you ever arrived at work, driven up multiple levels of a
             parking garage, only to find that all your office's allocated spots
             have been taken? Me too, so I decided to build a tool to help
@@ -87,13 +87,13 @@ const ProjectFeature1: React.FC = () => {
           <div className="mt-10 flex items-center gap-x-6">
             <a
               href="https://snappark.co"
-              className="rounded-md font-roboto bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400"
+              className="rounded-md  bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400"
             >
               Visit the website
             </a>
             <a
               href="#"
-              className="text-sm font-roboto font-semibold leading-6 text-white"
+              className="text-sm  font-semibold leading-6 text-white"
             >
               Learn more <span aria-hidden="true">→</span>
             </a>
