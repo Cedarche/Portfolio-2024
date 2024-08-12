@@ -16,6 +16,8 @@ import CCMobile from "/CC_mobile.png";
 import StellarmetricsWeb from "/Stellarmetrics_homepage_1.png";
 import StellarmetricsWeb2 from "/Stellarmetrics_homepage_2.png";
 import StellarmetricsMobile from "/Stellarmetrics_mobile.png";
+import { CiSatellite1 } from "react-icons/ci";
+
 
 const START_INDEX = 0;
 const DRAG_THRESHOLD = 150;

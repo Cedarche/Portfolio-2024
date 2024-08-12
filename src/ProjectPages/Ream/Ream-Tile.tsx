@@ -85,7 +85,7 @@ export default function ReamTile() {
           <h2 className="text-2xl font-bold tracking-tight text-gray-50">
             The Ream Tile
           </h2>
-          <p className="mt-6">
+          <p className="mt-4">
             The Tile is simultaneously the most difficult and most rewarding
             thing I've ever built. I designed then built every aspect of it from
             the ground up, including the housing, circuitry/PCB, and firmware.

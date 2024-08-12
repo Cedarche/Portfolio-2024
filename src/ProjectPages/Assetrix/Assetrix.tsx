@@ -1,20 +1,17 @@
 import {
-  CheckCircleIcon,
+
   InformationCircleIcon,
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
-  GlobeAltIcon,
+
 } from "@heroicons/react/20/solid";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
-import { SiTypescript, SiJavascript, SiStyledcomponents } from "react-icons/si";
+import { FaReact,  } from "react-icons/fa";
+import { SiTypescript,  } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import useMediaQuery from "../../Hooks/MediaQuery";
 
-import Icon from "./ATMS_logo_small.png";
+import Icon from "./Assets/ATMS_logo_small.png";
 import Assetrix_1 from "./Assets/Assetrix_1.jpeg";
 import Assetrix_2 from "./Assets/Assetrix_2.jpeg";
 import AssetrixQR1 from "./Assets/Assetrix_QRCodes_1.jpeg";
@@ -192,18 +189,18 @@ export default function Assetrix() {
               the original construction plans, ISO's and P&IDs, we quickly
               realised that once it had been dissassembled it would be
               incredibly difficult to identify the thousands of components -
-              piping, valves, instruments, supports, and machinery. if we wanted
+              piping, valves, instruments, supports, and machinery. If we wanted
               to have any chance at reassembling the compressor station, we
               needed a comprehensive inventory management system.
               <br />
               <br />
-              However, time was not on our side; the decomissioning had already
+              However time was not on our side; the decomissioning had already
               begun when it was purchased and we essentially had 3 business days
-              to get some sort of tracking system in place. Our first thought
-              was to use an established, industry specific asset managment tool,
-              which are quite common. When I contacted several providers I was
-              told that the lead time to get set-up was in the order of weeks,
-              not days.
+              to get some sort of asset tracking system in place. Our first
+              thought was to use an established, industry specific asset
+              managment tool, which are quite common. When I contacted several
+              providers I was told that the lead time to get set-up was in the
+              order of weeks, not days.
               <br />
               <br />
               I volunteered to build a system that would hopefully get us
@@ -214,17 +211,6 @@ export default function Assetrix() {
               ready for collection the next day. At the same time, another
               member of our team worked out the data structure we'd need to
               record of each piece of equipment: Plant Section, Subsection, Item
-              No., P&ID No. ISO No., Equipment type, description, photos, etc.
-              <br />
-              <br />
-              I volunteered to build a system that would hopefully get us
-              accross the line so we at least had some kind of record of how
-              everything was put together. The client approved our request on
-              Wednesday morning, by lunchtime I had ordered 2000 generic QR code
-              stickers/tags incremented from 000001 to 002000 that would be
-              ready for collection the next day. At the same time, another
-              member of our team worked out the data structure we'd need to
-              record of each piece of equipment: Plant Section, Package, Item
               No., P&ID No. ISO No., Equipment type, description, photos, etc.
               <br />
               <br />I then spent the next 4 days building a cross-platform
@@ -287,7 +273,7 @@ export default function Assetrix() {
               )}
             </div>
             <p className="mt-8">
-              On Monday the next week, another engineer from the team and myself
+              On Monday the next week, myself and another engineer from the team
               flew out to site and spent the next 3 weeks meticulously going
               through the original plans and marking every relavent piece of
               equipment on the site.
@@ -299,7 +285,10 @@ export default function Assetrix() {
               spray paint that corresponded with the relavent section. As the
               plant was being dissassembled and temporarily placed in a laydown
               yard for storage, we wanted to make sure that all related pieces
-              were placed in the same spot.
+              were placed in the same spot. Of course it isnt that simply, with
+              multiple systems being interconnected which you can see in the
+              Inventory page example above, where the super structures often
+              have 2 or more colours attached to them.
             </p>
 
             <div className="inline-flex w-full justify-center items-end gap-x-6">
@@ -355,20 +344,18 @@ export default function Assetrix() {
               )}
             </div>
 
-            <div className="mt-16 ">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-50">
-                Everything you need to get up and running
-              </h2>
+            <div className="mt-8 ">
               <p className="mt-6">
-                We divided the compressor station into super structures
-                (Compressor 1, TEG Unit, Flare, etc.) and assigned each of these
-                a color. When placing a QR code sticker
+                We used heavyduty all-weather stickers for the QR codes with the
+                intent that when the compressor station is reconstructed in Q4
+                2024, the engineers and construction crew will be able to scan a
+                piece of equipment, and know exactly where it is meant to go.
               </p>
-              <p className="mt-8">
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                Id dolor praesent donec est. Odio penatibus risus viverra tellus
-                varius sit neque erat velit.
+              <p className="mt-6">
+                The app is still in regular use at my previous company to help
+                organise equipment refurbishment. I havent made either the code
+                or the app itself public as it is technically not my property -
+                being built on company time.
               </p>
             </div>
           </div>

@@ -39,7 +39,7 @@ export default function Ream2() {
   return (
     <>
       <div className="relative isolate overflow-hidden px-8  py-32 lg:px-8">
-        <div className="mx-auto max-w-3xl text-base leading-7 text-gray-200">
+        <div className="mx-auto max-w-3xl 2xl:max-w-4xl text-base leading-7 text-gray-200">
           <div className="flex  items-center">
             <img
               alt=""
@@ -89,7 +89,7 @@ export default function Ream2() {
               A render of the Ream Tile with an example receipt.
             </figcaption>
           </figure>
-          <div className="mt-10 max-w-3xl">
+          <div className="mt-10">
             <p>
               The concept of Ream is simple, nobody likes paper receipts. While
               most people don't give receipts a second thought, I, like many
