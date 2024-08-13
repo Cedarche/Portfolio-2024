@@ -1,23 +1,33 @@
-import {
-  InformationCircleIcon,
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from "@heroicons/react/20/solid";
-import React, { Suspense, useRef, useState } from "react";
+import { InformationCircleIcon } from "@heroicons/react/20/solid";
+import { Suspense, useRef, useState } from "react";
 import { Model } from "./StellarmetricsModel";
-import { Canvas, useThree, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stage, PerspectiveCamera } from "@react-three/drei";
 import { motion, AnimatePresence } from "framer-motion";
-import StellarmetricsWeb from "./StellarmetricsWeb";
 
-import Icon from "./App_Icon.png";
+import { CiSatellite1 } from "react-icons/ci";
+import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
+import { SiTypescript, SiStyledcomponents } from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
+import { CgCPlusPlus } from "react-icons/cg";
+
 import WebsiteExample from "./Assets/Stellarmetrics_homepage_1.png";
-import WebsiteExample2 from "./Assets/Stellarmetrics_homepage_2.png";
 import Stellarmetrics_front from "./Assets/Stellarmetrics_front.png";
 import Stellarmetrics_back from "./Assets/Stellarmetrics_back.png";
 import Prototype1 from "./Assets/Stellarmetrics_prototype1.jpeg";
+
 import useMediaQuery from "../../Hooks/MediaQuery";
+import StellarmetricsWeb from "./StellarmetricsWeb";
+
+const stack = [
+  { name: "Typescript", icon: SiTypescript },
+  { name: "Styled Components", icon: SiStyledcomponents },
+  { name: "C++", icon: CgCPlusPlus },
+  { name: "React", icon: FaReact },
+  { name: "Node.js", icon: FaNodeJs },
+  { name: "AWS", icon: FaAws },
+  { name: "Firebase", icon: IoLogoFirebase },
+];
 
 const images = [
   {
@@ -80,15 +90,12 @@ export default function Stellarmetrics() {
 
   return (
     <>
-      {/* <Navbar open={open} setOpen={setOpen} /> */}
       <div className="relative isolate overflow-hidden px-6 py-32 lg:px-8">
-        <div className="mx-auto max-w-3xl text-base leading-7 text-gray-200">
+        <div className="mx-auto max-w-3xl 2xl:max-w-4xl text-base leading-7 text-gray-200">
           <div className="inline-flex align-middle justify-center">
-            {/* <img
-              alt=""
-              src={Icon}
-              className=" max-w-[50px] p-1 rounded-lg bg-gray-900 shadow-xl ring-1 ring-gray-400/10 "
-            /> */}
+            <div className="p-2 ml-0.5 border rounded-lg w-[50px] h-[50px] flex items-center justify-center ">
+              <CiSatellite1 className="h-7 w-7" />
+            </div>
             <h1 className="mt-1 ml-3 text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
               Stellarmetrics
             </h1>
@@ -100,6 +107,17 @@ export default function Stellarmetrics() {
             would often have a generator, and satelite internet (Starlink) set
             up to provide telemetry.
           </p>
+          <div className=" z-10 rounded-xl flex no-scrollbar items-center gap-x-2 overflow-x-scroll  h-[50px]">
+            {stack.map((item, index) => (
+              <span
+                key={index}
+                className="flex items-center rounded-md gap-x-1 bg-green-500/10 px-2 py-1.5 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20 whitespace-nowrap"
+              >
+                <item.icon aria-hidden="true" />
+                <span className="mt-0.5 ml-0.5">{item.name}</span>
+              </span>
+            ))}
+          </div>
           <figure className="mt-16">
             <img
               alt=""
@@ -111,7 +129,7 @@ export default function Stellarmetrics() {
                 aria-hidden="true"
                 className="mt-0.5 h-5 w-5 flex-none text-gray-300"
               />
-              The Stellarmetrics Landing Page (unfinished, don't judge).
+              The Stellarmetrics Landing Page (It's just a placeholder don't judge).
             </figcaption>
           </figure>
           <div className="mt-10 ">
@@ -275,6 +293,7 @@ export default function Stellarmetrics() {
                     dragConstraints={{ left: 0, right: 0 }}
                     dragElastic={1}
                     onDragEnd={(e, { offset, velocity }) => {
+                      console.log(e);
                       const swipe = swipePower(offset.x, velocity.x);
 
                       if (swipe < -swipeConfidenceThreshold) {

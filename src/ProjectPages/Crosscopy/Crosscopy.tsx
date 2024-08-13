@@ -1,33 +1,41 @@
 import {
-  CheckCircleIcon,
   InformationCircleIcon,
   CloudArrowUpIcon,
   LockClosedIcon,
   ServerIcon,
-  GlobeAltIcon,
 } from "@heroicons/react/20/solid";
-import { useState } from "react";
+import { useEffect } from "react";
 
 import CrossCopyIcon from "./Assets/CC_ICON.png";
 
 import HomepageImage1 from "./Assets/CC_homepage.png";
 
-import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
-import { SiTypescript, SiJavascript, SiStyledcomponents } from "react-icons/si";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import {  SiJavascript, SiStyledcomponents } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 
 import CrosscopyWeb from "./CrosscopyWeb";
 
 const stack = [
   { name: "Javascript", icon: SiJavascript },
-  { name: "Styled Components", icon: SiTypescript },
+  { name: "Node.js", icon: FaNodeJs },
   { name: "React", icon: FaReact },
   { name: "React Native", icon: FaReact },
-  { name: "Node.js", icon: FaNodeJs },
+  { name: "Styled Components", icon: SiStyledcomponents },
   { name: "Firebase", icon: IoLogoFirebase },
 ];
 
 export default function Crosscopy() {
+  useEffect(() => {
+    const preloadIcon = (iconSrc) => {
+      const img = new Image();
+      img.src = iconSrc;
+    };
+
+    preloadIcon(HomepageImage1); // Preload the icon
+    preloadIcon(CrossCopyIcon); // Preload the icon
+  }, []);
+
   return (
     <>
       {/* <Navbar open={open} setOpen={setOpen} /> */}
@@ -155,7 +163,7 @@ export default function Crosscopy() {
               </li>
             </ul>
           </div>
-            <CrosscopyWeb />
+          <CrosscopyWeb />
         </div>
       </div>
     </>

@@ -1,10 +1,9 @@
 // Experience.tsx
-import React, { useId, useState } from "react";
+import React, { useId } from "react";
 import { Intro, IntroFooter } from "./Intro";
 import { StarField } from "./Starfield";
 import Article from "./JobArticle";
-import Navbar from "../Landing/Navbar/Navbar";
-import Navbar2 from "../Navbar/Navbar2";
+import Navbar2 from "../Navbar/Navbar";
 import ReactMarkdown from "react-markdown";
 
 const articles = [
@@ -48,7 +47,7 @@ While studying I completed two internships with a mechanical design firm that sp
     company: "Queensland Industrial Cladding",
     title: "Roofer/Laborer",
     location: "Toowoomba, QLD",
-    dates: "December 2013 - December 2018",
+    dates: "Dec 2013 - Dec 2018",
     content: `
 During university, I worked part-time within a team of roofers, cladding commercial buildings across Queensland. Including a wide variety of job sites: military barracks, mine sites, grain silos, apartment blocks, etc.
   - Working safetly within a team in dangerous conditions.
@@ -66,7 +65,7 @@ function Timeline() {
   // Example dates for the timeline
 
   return (
-    <div className="pointer-events-none absolute inset-0 z-50 overflow-hidden lg:right-[calc(max(2rem,50%-38rem)+40rem)] lg:min-w-[32rem] lg:overflow-visible min-w-[500px]">
+    <div className="pointer-events-none absolute inset-0 z-40 overflow-hidden lg:right-[calc(max(2rem,50%-38rem)+40rem)] lg:min-w-[32rem] lg:overflow-visible min-w-[500px]">
       <svg
         className="absolute left-[max(0px,calc(50%-18.125rem))] top-0 h-full w-1.5 lg:left-full lg:ml-1 xl:left-auto xl:right-1 xl:ml-0"
         aria-hidden="true"
@@ -150,9 +149,7 @@ function FixedSidebar({ main, footer }: FixedSidebarProps) {
               {main}
             </div>
           </div>
-          <div className="flex flex-1 items-end justify-center pb-4 lg:justify-start lg:pb-6">
-            {footer}
-          </div>
+        
         </div>
       </div>
     </div>
@@ -162,17 +159,17 @@ function FixedSidebar({ main, footer }: FixedSidebarProps) {
 function ArticleContent({ company, title, location, dates, content }) {
   return (
     <>
-      <div className="w-full  2xl:min-w-[800px] flex items-center justify-between mb-2">
-        <div className="flex flex-col">
-          <h2 className="text-white font-bold">{company}</h2>
-          <h3 className="text-white italic">{title}</h3>
+      <div className="w-full text-sm sm:text-base  2xl:min-w-[800px] flex flex-col items-center justify-between mb-2">
+        <div className="flex flex-row w-full justify-between">
+          <h3 className="text-white font-bold">{company}</h3>
+          <h3 className="text-white font-bold text-right">{dates}</h3>
         </div>
-        <div className="flex flex-col items-end">
-          <h2 className="text-white font-bold">{dates}</h2>
-          <h3 className="text-white italic">{location}</h3>
+        <div className="flex flex-row w-full justify-between">
+          <h4 className="text-white italic">{title}</h4>
+          <h4 className="text-white italic">{location}</h4>
         </div>
       </div>
-      <div className="min-h-40 border border-gray-500 2xl:min-w-[800px] bg-gray-800/60 rounded-md shadow-lg text-white p-4">
+      <div className="min-h-40 border border-gray-500 2xl:min-w-[800px] bg-gray-800/60 rounded-md text-sm shadow-lg text-white p-4">
         <ReactMarkdown
           components={{
             ul: ({ node, ...props }) => (

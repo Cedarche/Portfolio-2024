@@ -1,12 +1,12 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import SnapDash from "../../assets/Snappark/DashboardExample.png";
-import SnapLogo from "../../assets/Snappark/App_Icon.png";
+import { Link } from "react-router-dom";
 import SnapLogo2 from "../../assets/Snappark/SnapParkLogo-01.png";
 import './Features.css'
 
 const ProjectFeature: React.FC = () => {
   return (
-    <div className="relative isolate overflow-hidden bg-black">
+    <div className="relative isolate overflow-hidden no-scrollbar bg-black">
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
@@ -85,18 +85,19 @@ const ProjectFeature: React.FC = () => {
             employees when the office is full.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <a
-              href="https://snappark.co"
+            <Link
+              to="https://snappark.co"
+              target="_blank"
               className="rounded-md  bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400"
             >
               Visit the website
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/projects/snappark"
               className="text-sm  font-semibold leading-6 text-white"
             >
               Learn more <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
@@ -106,6 +107,7 @@ const ProjectFeature: React.FC = () => {
               alt="Snap Park Dash screenshot"
               width={2432}
               height={1442}
+              draggable={false}
               className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 mt-10"
             />
           </div>

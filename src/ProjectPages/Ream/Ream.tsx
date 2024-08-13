@@ -1,8 +1,5 @@
 import {
-  CheckCircleIcon,
   InformationCircleIcon,
-  CloudIcon,
-  LockClosedIcon,
   ServerIcon,
   GlobeAltIcon,
   DevicePhoneMobileIcon,
@@ -24,10 +21,10 @@ import ReamAPI from "./ReamAPI";
 
 const stack = [
   { name: "Typescript", icon: SiTypescript },
-  { name: "Styled Components", icon: SiTypescript },
   { name: "C++", icon: CgCPlusPlus },
   { name: "React", icon: FaReact },
   { name: "React Native", icon: FaReact },
+  { name: "Styled Components", icon: SiStyledcomponents },
   { name: "Node.js", icon: FaNodeJs },
   { name: "AWS", icon: FaAws },
   { name: "Firebase", icon: IoLogoFirebase },
@@ -59,10 +56,10 @@ export default function Ream2() {
             {stack.map((item, index) => (
               <span
                 key={index}
-                className="inline-flex items-center rounded-md gap-x-1 bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20 whitespace-nowrap"
+                className="flex items-center rounded-md gap-x-1 bg-green-500/10 px-2 py-1.5 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20 whitespace-nowrap"
               >
                 <item.icon aria-hidden="true" />
-                {item.name}
+                <span className="mt-0.5 ml-0.5">{item.name}</span>
               </span>
             ))}
           </div>

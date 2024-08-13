@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { CiLinkedin } from "react-icons/ci";
+import Resume from "/TomCarruthers_Resume_2024.pdf";
 
 import { IconLink } from "./IconLink"; // Adjust the path as needed
 
@@ -19,96 +21,84 @@ function GitHubIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-function FeedIcon(props: React.ComponentPropsWithoutRef<"svg">) {
-  return (
-    <svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M2.5 3a.5.5 0 0 1 .5-.5h.5c5.523 0 10 4.477 10 10v.5a.5.5 0 0 1-.5.5h-.5a.5.5 0 0 1-.5-.5v-.5A8.5 8.5 0 0 0 3.5 4H3a.5.5 0 0 1-.5-.5V3Zm0 4.5A.5.5 0 0 1 3 7h.5A5.5 5.5 0 0 1 9 12.5v.5a.5.5 0 0 1-.5.5H8a.5.5 0 0 1-.5-.5v-.5a4 4 0 0 0-4-4H3a.5.5 0 0 1-.5-.5v-.5Zm0 5a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"
-      />
-    </svg>
-  );
-}
-
-function XIcon(props: React.ComponentPropsWithoutRef<"svg">) {
-  return (
-    <svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor" {...props}>
-      <path d="M9.51762 6.77491L15.3459 0H13.9648L8.90409 5.88256L4.86212 0H0.200195L6.31244 8.89547L0.200195 16H1.58139L6.92562 9.78782L11.1942 16H15.8562L9.51728 6.77491H9.51762ZM7.62588 8.97384L7.00658 8.08805L2.07905 1.03974H4.20049L8.17706 6.72795L8.79636 7.61374L13.9654 15.0075H11.844L7.62588 8.97418V8.97384Z" />
-    </svg>
-  );
-}
 
 export function Intro() {
   return (
     <div className="no-scrollbar">
-      <h1 className="mt-14  font-display text-4xl/tight font-light text-white">
-        About Me
-      </h1>
-      <p className="mt-4 text-sm/6 text-gray-300">
-        I'm a hardworking mechanical engineer with 5+ years of experience in the
-        Natural Gas industry as a project manager, and 6+ years of part-time
-        experience in the construction industry. I've recently moved to London
-        and I'm looking to change careers into software engineering as that's
-        where my passion really lies.
-        <br />
-        <br />
-        Over the past 4 years I've spent much of my spare time learning and
-        building out various ideas and software projects. While I realise that
-        most of my experience lends itself to more mechanical roles, I'm hoping
-        my portfolio of React/React-Native projects might be enough to convice
-        you.
-      </p>
-      <div className="w-full border-t border-gray-50/40 mt-10">
-        <h1 className="mt-4 font-display text-4xl/tight font-light text-white">
+      <div id="about">
+        <h1 className="mt-14  font-display text-2xl/tight font-light text-white">
+          About Me
+        </h1>
+        <p className="mt-4 text-sm/6 text-gray-300">
+          I'm a hardworking mechanical engineer with 5+ years of experience in
+          the Natural Gas industry as a project manager, and 6+ years of
+          part-time experience in the construction industry. I've recently moved
+          to London and I'm looking to change careers into software engineering
+          as that's where my passion really lies.
+          <br />
+          <br />
+          Over the past 4 years I've spent much of my spare time learning and
+          building out various ideas and software projects. While I realise that
+          most of my experience lends itself to more mechanical roles, I'm
+          hoping my portfolio of React/React-Native projects might be enough to
+          convice you.
+        </p>
+      </div>
+      <div id="Education" className="w-full border-t border-gray-50/40 mt-10">
+        <h1 className="mt-4 font-display text-2xl/tight font-light text-white">
           Education
         </h1>
-        <div className="w-full mt-4  flex items-center justify-between mb-2">
+        <div className="w-full mt-4 text-sm sm:text-base  flex items-center justify-between mb-2">
           <div className="flex flex-col">
-            <h2 className="text-white font-bold">
+            <h3 className="text-white font-bold">
               The University of Queensland
-            </h2>
-            <h3 className="text-white italic">
-              Bachelor of Mechanical Engineering (Honors)
             </h3>
+            <h4 className="text-white italic">
+              Bachelor of Mechanical Engineering (Honors)
+            </h4>
           </div>
-          <div className="flex flex-col items-end">
-            <h2 className="text-white font-bold">June, 2019</h2>
-            <h3 className="text-white italic">Brisbane, QLD</h3>
+          <div className="flex flex-col items-end justify-end">
+            <h3 className="text-white font-bold">June, 2019</h3>
+            <h4 className="text-white italic text-right">Brisbane, QLD</h4>
           </div>
         </div>
         <p className="mt-4 text-sm/6 text-gray-300">
           I attended St John’s College and played rugby union & tennis for the
-          first two years of my university education.{" "}
+          first two years of my university education. I was part of the
+          Mechanical Engineering Student Society (MESS) for the duration of my
+          degree.
         </p>
       </div>
-      <div className="w-full border-t border-gray-50/40 mt-10">
-        <h1 className="mt-4 font-display text-4xl/tight font-light text-white">
+      <div
+        id="References"
+        className="w-full text-sm sm:text-base border-t border-gray-50/40 mt-10"
+      >
+        <h1 className="mt-4 font-display text-2xl/tight font-light text-white">
           References
         </h1>
         <div>
           <div className="w-full mt-4  flex items-center justify-between mb-2">
-            <h2 className="text-white font-bold">Simon Hann</h2>
-            <h2 className="text-white">Director - inGauge Energy</h2>
+            <h3 className="text-white font-bold">Simon Hann</h3>
+            <h3 className="text-white">Director - inGauge Energy</h3>
           </div>
           <div className="w-full mt-2  flex items-center justify-between mb-2">
-            <h2 className="text-white">simon.hann@ingauge.com.au</h2>
-            <h2 className="text-white">+61 400 656 886</h2>
+            <h3 className="text-white">simon.hann@ingauge.com.au</h3>
+            <h3 className="text-white">+61 400 656 886</h3>
           </div>
         </div>
         <div>
           <div className="w-full mt-4  flex items-center justify-between mb-2">
-            <h2 className="text-white font-bold">Justin Clark</h2>
-            <h2 className="text-white">Director - JPC Engineering</h2>
+            <h3 className="text-white font-bold">Justin Clark</h3>
+            <h3 className="text-white">Director - JPC Engineering</h3>
           </div>
           <div className="w-full mt-2  flex items-center justify-between mb-2">
-            <h2 className="text-white">justin@jpceng.com.au</h2>
-            <h2 className="text-white">+61 410 510 734</h2>
+            <h3 className="text-white">justin@jpceng.com.au</h3>
+            <h3 className="text-white">+61 410 510 734</h3>
           </div>
         </div>
       </div>
       <div className="w-full border-t border-gray-50/40 mt-10">
-        <h1 className="mt-4 font-display text-4xl/tight font-light text-white">
+        <h1 className="mt-4 font-display text-2xl/tight font-light text-white">
           Interests
         </h1>
         <p className="mt-4 text-sm/6 text-gray-300">
@@ -120,14 +110,27 @@ export function Intro() {
         </p>
       </div>
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
-        <IconLink to="#" icon={BookIcon} className="flex-none">
-          Documentation
+        <IconLink
+          to="/TomCarruthers_Resume_2024.pdf"
+          target="_blank"
+          icon={BookIcon}
+          className="flex-none"
+        >
+          Resume
         </IconLink>
-        <IconLink to="#" icon={GitHubIcon} className="flex-none">
+        <IconLink
+          to="https://github.com/Cedarche"
+          icon={GitHubIcon}
+          className="flex-none"
+        >
           GitHub
         </IconLink>
-        <IconLink to="/feed.xml" icon={FeedIcon} className="flex-none">
-          RSS
+        <IconLink
+          to="https://www.linkedin.com/in/tom-carruthers-1b8709184/"
+          icon={CiLinkedin}
+          className="flex-none"
+        >
+          Linkedin
         </IconLink>
       </div>
     </div>
@@ -137,7 +140,7 @@ export function Intro() {
 export function IntroFooter() {
   return (
     <p className="flex items-baseline gap-x-2 text-[0.8125rem]/6 text-gray-500">
-      Brought to you by{" "}
+      Tom Carruthers
     </p>
   );
 }

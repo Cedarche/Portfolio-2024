@@ -6,7 +6,7 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { CgCPlusPlus } from "react-icons/cg";
 import { DiPostgresql } from "react-icons/di";
 import { FiExternalLink, FiArrowRight } from "react-icons/fi";
-
+import { Link } from "react-router-dom";
 import ReamWeb from "/Ream_hero.png";
 import ReamMobile from "/Ream_mobile.jpeg";
 import SnapparkWeb from "/Snap_park_hero.png";
@@ -17,7 +17,14 @@ import StellarmetricsWeb from "/Stellarmetrics_homepage_1.png";
 import StellarmetricsWeb2 from "/Stellarmetrics_homepage_2.png";
 import StellarmetricsMobile from "/Stellarmetrics_mobile.png";
 import { CiSatellite1 } from "react-icons/ci";
+import Assetrix1 from "/Assetrix_1.jpeg";
+import Assetrix2 from "/Assetrix_2.jpeg";
 
+const assetrixImages = [
+  { name: "Assetrix 1", image: Assetrix1 },
+  { name: "Assetrix 2", image: Assetrix2 },
+  { name: "Assetrix 3", image: Assetrix2 },
+];
 
 const START_INDEX = 0;
 const DRAG_THRESHOLD = 150;
@@ -27,6 +34,7 @@ const CURSOR_SIZE = 80;
 interface Article {
   title: string;
   url: string;
+  internalURL: string;
   description: string;
   stack: { name: string; icon: React.ComponentType }[];
   imageWeb: any;
@@ -37,6 +45,7 @@ const articles: Article[] = [
   {
     title: "Ream",
     url: "/",
+    internalURL: "/projects/ream",
     description:
       "Ream is an end-to-end digital receipt system aimed at both enterprises and consumers. It consists of Web & Native Mobile applications, and a hardware component, the Ream Tile, for which I designed the PCB and housing from the ground up.",
     stack: [
@@ -54,6 +63,8 @@ const articles: Article[] = [
   {
     title: "Cross Copy",
     url: "/",
+    internalURL: "/projects/crosscopy",
+
     description:
       "Cross Copy is a simply cross-platform application I built to quickly transfer text and files without the hassel or complexity of Dropbox or Google Drive. You can share photos, videos, and files natively on your mobile device - then instantly access them on any of your other devices.",
     stack: [
@@ -69,6 +80,8 @@ const articles: Article[] = [
   {
     title: "Stellarmetrics",
     url: "/",
+    internalURL: "/projects/stellarmetrics",
+
     description:
       "Stellarmetrics is a remote monitoring solution for assets in rural areas, it utilises the SWARM satellite network to send small packets of data (tank water levels, pressure readings, etc.) for a fraction of the cost of traditional systems.",
     stack: [
@@ -85,6 +98,8 @@ const articles: Article[] = [
   {
     title: "Assetrix",
     url: "/",
+    internalURL: "/projects/assetrix",
+
     description:
       "Assetrix is an internal asset tracking system that uses QR Codes to track the location, P&ID, ISO number for industrial equipment. It was built specifically for a client at my previous job in order to keep track of the decomissioning of a complex gas compressor station and is still in use today.",
 
@@ -96,6 +111,10 @@ const articles: Article[] = [
       { name: "PostgreSQL", icon: DiPostgresql },
       { name: "Firebase", icon: IoLogoFirebase },
     ],
+    // images: [
+    //   { name: "Assetrix1", image: Assetrix1 },
+    //   { name: "Assetrix1", image: Assetrix1 },
+    // ],
     imageWeb: ReamWeb,
     imageMobile: ReamMobile,
   },
@@ -211,7 +230,7 @@ const Projects: React.FC = () => {
   }
 
   return (
-    <div className="relative isolate flex items-center flex-col py-24 sm:py-32 justify-center overflow-hidden bg-black">
+    <div className="relative isolate flex  no-scrollbar items-center flex-col py-24 sm:py-32 justify-center overflow-hidden bg-black">
       <div className="w-full max-w-7xl px-6 lg:px-4">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-base font-semibold leading-7 text-green-400">
@@ -280,18 +299,20 @@ const Projects: React.FC = () => {
               </svg>
             </div>
             <div className="inline-flex align-middle mt-3 justify-start w-full">
-              <button
-                type="button"
+              <Link
+                to={article.url}
                 className="rounded inline-flex items-center gap-x-2 bg-green-500 px-2 py-1 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
               >
                 Open
                 <FiExternalLink />
-              </button>
-              <p className="ml-3 text-center inline-flex gap-x-1 items-center text-sm">
+              </Link>
+              <Link
+                to={article.internalURL}
+                className="ml-3 text-center inline-flex gap-x-1 items-center text-sm"
+              >
                 Learn more <FiArrowRight />
-              </p>
+              </Link>
             </div>
-          
           </motion.div>
         ))}
       </div>
@@ -329,7 +350,7 @@ const Projects: React.FC = () => {
                   layout
                   key={article.title}
                   ref={(el) => (itemsRef.current[index] = el)}
-                  className={`group relative shrink-0 select-none px-3 min-w-[1280px] max-h-[800px] transition-opacity duration-300 ${
+                  className={`group cursor-normal relative shrink-0 select-none px-3 min-w-[1280px] max-h-[800px] transition-opacity duration-300 ${
                     !active ? "opacity-90" : ""
                   }`}
                   transition={{
@@ -340,54 +361,105 @@ const Projects: React.FC = () => {
                     flexBasis: active ? "40%" : "40%",
                   }}
                 >
-                  <a
-                    href={article.url}
-                    className={`grid overflow-hidden rounded-xl bg-gray-900 ${
+                  <div
+                    className={`grid cursor-pointer overflow-hidden rounded-xl bg-gray-900 ${
                       active ? "aspect-[5.2/3]" : "aspect-[5.2/3]"
                     }`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    draggable={false}
+                    draggable={false} // Disable dragging
                     onClick={disableDragClick}
                   >
                     <div className="text-xl font-bold text-blue-200 relative max-h-full inset-0">
-                      <div className="text-xl font-bold rounded-xl overflow-hidden text-blue-200  absolute inset-6 aspect-[5/2.9] max-h-[85%]">
-                        <img
-                          alt={article.title}
-                          src={article.imageWeb}
-                          className=" object-cover"
-                        />
-                      </div>
-                      <div className=" border-gray-200   overflow-hidden rounded-xl absolute top-20 right-6 h-[85%] aspect-[9/18.5]">
-                        <svg
-                          role="img"
-                          viewBox="0 0 366 729"
-                          className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
-                        >
-                          <title>App screenshot</title>
-                          <defs>
-                            <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
-                              <rect rx={36} width={316} height={684} />
-                            </clipPath>
-                          </defs>
-                          <path
-                            d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z"
-                            fill="#4B5563"
-                          />
-                          <path
-                            d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
-                            fill="#343E4E"
-                          />
-                          <foreignObject
-                            width={316}
-                            height={684}
-                            clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
-                            transform="translate(24 24)"
-                          >
-                            <img alt="" src={article.imageMobile} />
-                          </foreignObject>
-                        </svg>
-                      </div>
+                      {article.title === "Assetrix" ? (
+                        <div className="flex justify-between absolute inset-6 space-x-4 px-6">
+                          {assetrixImages.map(
+                            (item, i) => (
+                              <div
+                                key={i}
+                                className=" border-gray-200 overflow-hidden rounded-xl h-[95%] aspect-[9/18.5]"
+                              >
+                                <svg
+                                  role="img"
+                                  viewBox="0 0 366 729"
+                                  className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
+                                >
+                                  <title>{item.name}</title>
+                                  <defs>
+                                    <clipPath id={`clip-${name}`}>
+                                      <rect rx={36} width={316} height={684} />
+                                    </clipPath>
+                                  </defs>
+                                  <path
+                                    d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z"
+                                    fill="#4B5563"
+                                  />
+                                  <path
+                                    d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
+                                    fill="#343E4E"
+                                  />
+                                  <foreignObject
+                                    width={316}
+                                    height={684}
+                                    clipPath={`url(#clip-${item.name})`}
+                                    transform="translate(24 24)"
+                                  >
+                                    <img
+                                      alt={item.name}
+                                      src={item.image} // Assuming you have Assetrix1.jpg, Assetrix2.jpg, Assetrix3.jpg
+                                      className="rounded-[35px]"
+                                      draggable={false}
+                                    />
+                                  </foreignObject>
+                                </svg>
+                              </div>
+                            )
+                          )}
+                        </div>
+                      ) : (
+                        <>
+                          <div className="text-xl font-bold rounded-xl overflow-hidden text-blue-200 absolute inset-6 aspect-[5/2.9] max-h-[85%]">
+                            <img
+                              alt={article.title}
+                              src={article.imageWeb}
+                              className="object-cover"
+                              draggable={false}
+                            />
+                          </div>
+                          <div className="border-gray-200 overflow-hidden rounded-xl absolute top-20 right-6 h-[85%] aspect-[9/18.5]">
+                            <svg
+                              role="img"
+                              viewBox="0 0 366 729"
+                              className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
+                            >
+                              <title>App screenshot</title>
+                              <defs>
+                                <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
+                                  <rect rx={36} width={316} height={684} />
+                                </clipPath>
+                              </defs>
+                              <path
+                                d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z"
+                                fill="#4B5563"
+                              />
+                              <path
+                                d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
+                                fill="#343E4E"
+                              />
+                              <foreignObject
+                                width={316}
+                                height={684}
+                                clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
+                                transform="translate(24 24)"
+                              >
+                                <img
+                                  alt=""
+                                  src={article.imageMobile}
+                                  className="rounded-[35px]"
+                                />
+                              </foreignObject>
+                            </svg>
+                          </div>
+                        </>
+                      )}
                       <div className="border-gray-200 rounded-xl flex items-center gap-x-2 absolute bottom-6 left-6 h-[50px]">
                         {article.stack.map((item, index) => (
                           <span
@@ -400,7 +472,7 @@ const Projects: React.FC = () => {
                         ))}
                       </div>
                     </div>
-                  </a>
+                  </div>
                 </motion.li>
               );
             })}

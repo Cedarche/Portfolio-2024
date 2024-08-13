@@ -1,13 +1,9 @@
-import {
-
-  InformationCircleIcon,
-
-} from "@heroicons/react/20/solid";
-import { useState } from "react";
+import { InformationCircleIcon } from "@heroicons/react/20/solid";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { FaReact,  } from "react-icons/fa";
-import { SiTypescript,  } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import useMediaQuery from "../../Hooks/MediaQuery";
 
@@ -78,6 +74,32 @@ const Slideshow = ({ imageIndex }: { imageIndex: number }) => (
 export default function Assetrix() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Preload images and video when the component mounts
+  useEffect(() => {
+    const preloadImages = (imageArray) => {
+      imageArray.forEach((image) => {
+        const img = new Image();
+        img.src = image.src;
+      });
+    };
+
+    const preloadVideo = (videoSrc) => {
+      const video = document.createElement("video");
+      video.src = videoSrc;
+      video.preload = "auto"; // Preload video
+    };
+
+    const preloadIcon = (iconSrc) => {
+      const img = new Image();
+      img.src = iconSrc;
+    };
+
+    preloadImages(images);
+    preloadImages(images2);
+    preloadVideo(AssetrixAppDemo);
+    preloadIcon(Icon); // Preload the icon
+  }, []);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);

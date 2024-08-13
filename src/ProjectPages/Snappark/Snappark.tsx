@@ -116,10 +116,10 @@ export default function Snappark() {
             {stack.map((item, index) => (
               <span
                 key={index}
-                className="inline-flex items-center rounded-md gap-x-1 bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20 whitespace-nowrap"
+                className="flex items-center rounded-md gap-x-1 bg-green-500/10 px-2 py-1.5 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20 whitespace-nowrap"
               >
                 <item.icon aria-hidden="true" />
-                {item.name}
+                <span className="mt-0.5 ml-0.5">{item.name}</span>
               </span>
             ))}
           </div>

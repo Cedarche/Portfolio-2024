@@ -148,7 +148,7 @@ function Constellation({
     if (isFilled) {
       sequence.push([
         ref.current,
-        { fill: 'rgb(255 255 255 / 0.02)' },
+        { fill: 'rgb(255 255 255 / 0.01)' },
         { duration: 1 },
       ]);
     }
