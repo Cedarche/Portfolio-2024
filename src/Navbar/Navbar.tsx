@@ -7,7 +7,7 @@ import {
   DialogPanel,
   TransitionChild,
 } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon, LightBulbIcon } from "@heroicons/react/24/outline";
 import { CiLinkedin } from "react-icons/ci";
 import {
   HomeIcon,
@@ -79,6 +79,14 @@ const links = [
   },
   {
     id: 2,
+    name: "Projects",
+    href: "/projects/ream",
+    initial: "P",
+    icon: LightBulbIcon,
+    current: false,
+  },
+  {
+    id: 2,
     name: "Experience",
     href: "/experience",
     initial: "E",
@@ -143,7 +151,7 @@ export default function Navbar({ children }: LayoutProps) {
       <div
         className={`${
           currentNav === "/" ? "fixed sm:static" : "fixed"
-        } inset-0 overflow-auto no-scrollbar`}
+        } inset-0 overflow-x-hidden no-scrollbar`}
       >
         <Dialog
           open={sidebarOpen}
@@ -179,7 +187,7 @@ export default function Navbar({ children }: LayoutProps) {
               <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-2 ring-1 ring-white/10">
                 <div className="flex h-16 shrink-0 items-center">
                   <motion.div
-                    className="font-paytone text-3xl text-white lg:text-3xl 2xl:text-4xl  font-bold absolute top-2 left-4"
+                    className=" text-3xl text-white lg:text-3xl 2xl:text-4xl  font-black absolute top-2 left-4"
                     initial="hidden"
                     animate="visible"
                     variants={fadeIn}
@@ -191,33 +199,7 @@ export default function Navbar({ children }: LayoutProps) {
                   <ul role="list" className="flex flex-1 flex-col gap-y-7">
                     <li>
                       <div className="text-xs font-semibold leading-6 text-green-400">
-                        Projects
-                      </div>
-                      <ul role="list" className="-mx-2 space-y-1">
-                        {navigation.map((item) => (
-                          <li key={item.name}>
-                            <Link
-                              to={item.href}
-                              className={classNames(
-                                currentNav === item.href
-                                  ? "bg-gray-800 text-white"
-                                  : "text-gray-400 hover:bg-gray-800 hover:text-white",
-                                "group flex gap-x-3 rounded-md p-2  text-md items-center font-semibold leading-6"
-                              )}
-                              onClick={() => {
-                                setCurrentNav(item.href);
-                                setSidebarOpen(false); // Close sidebar on navigation
-                              }}
-                            >
-                              {item.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </li>
-                    <li>
-                      <div className="text-xs font-semibold leading-6 text-green-400">
-                        Other links
+                        Links
                       </div>
                       <ul role="list" className="-mx-2 mt-2 space-y-1">
                         {links.map((team) => (
@@ -244,6 +226,7 @@ export default function Navbar({ children }: LayoutProps) {
                         ))}
                       </ul>
                     </li>
+               
                   </ul>
                 </nav>
               </div>
@@ -252,7 +235,7 @@ export default function Navbar({ children }: LayoutProps) {
         </Dialog>
         <div className="hidden lg:block sticky top-0 left-0 right-0 h-[45px] z-60 lg:h-[55px] xl:h-[60px] 2xl:h-[1px]  bg-black items-center justify-center z-50 text-white ">
           <motion.div
-            className="font-paytone text-xl lg:text-3xl 2xl:text-4xl  font-bold absolute top-2 left-4"
+            className=" text-xl lg:text-3xl 2xl:text-4xl  font-black absolute top-2 left-4"
             initial="hidden"
             animate="visible"
             variants={fadeIn}
@@ -271,7 +254,7 @@ export default function Navbar({ children }: LayoutProps) {
                   variants={fadeIn}
                   custom={index}
                 >
-                  <Link to={item.link} className="font-paytone text-lg">
+                  <Link to={item.link} className="font-black text-lg">
                     {item.headingName}
                   </Link>
                 </motion.div>
@@ -281,7 +264,7 @@ export default function Navbar({ children }: LayoutProps) {
         </div>
 
         <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900/90 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
-          <div className="flex-1 font-semibold font-paytone text-xl leading-6 text-white">
+          <div className="flex-1  font-black text-xl leading-6 text-white">
             <motion.div initial="hidden" animate="visible" variants={fadeIn}>
               <Link to="/">TOM CARRUTHERS</Link>
             </motion.div>

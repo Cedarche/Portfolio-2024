@@ -137,7 +137,7 @@ export default function Projects() {
 
   return (
     <>
-      <div>
+      <div className="bg-black">
         <Dialog
           open={sidebarOpen}
           onClose={setSidebarOpen}
@@ -172,7 +172,7 @@ export default function Projects() {
               <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-2 ring-1 ring-white/10">
                 <div className="flex h-16 shrink-0 items-center">
                   <motion.div
-                    className="font-paytone text-3xl text-white lg:text-3xl 2xl:text-4xl  font-bold absolute top-2 left-4"
+                    className=" text-3xl text-white lg:text-3xl 2xl:text-4xl  font-black absolute top-2 left-4"
                     initial="hidden"
                     animate="visible"
                     variants={fadeIn}
@@ -258,7 +258,7 @@ export default function Projects() {
           <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900/60 px-6">
             <Link to="/" className="flex h-16 shrink-0 items-center">
               <motion.div
-                className="font-paytone cursor-pointer text-xl text-white lg:text-3xl 2xl:text-3xl  font-bold absolute top-2 left-4"
+                className=" cursor-pointer text-xl text-white lg:text-3xl 2xl:text-3xl  font-black absolute top-2 left-4"
                 initial="hidden"
                 animate="visible"
                 variants={fadeIn}
@@ -336,7 +336,7 @@ export default function Projects() {
         </div>
 
         <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900/90 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
-          <div className="flex-1 font-semibold font-paytone text-xl leading-6 text-white">
+          <div className="flex-1 font-black text-xl leading-6 text-white">
             <motion.div initial="hidden" animate="visible" variants={fadeIn}>
               TOM CARRUTHERS
             </motion.div>

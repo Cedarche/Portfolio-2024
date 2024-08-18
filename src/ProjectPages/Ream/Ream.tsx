@@ -4,12 +4,14 @@ import {
   GlobeAltIcon,
   DevicePhoneMobileIcon,
   CpuChipIcon,
+  ArrowTopRightOnSquareIcon
 } from "@heroicons/react/20/solid";
 
 import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
 import { SiTypescript, SiStyledcomponents } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import { CgCPlusPlus } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 import ReamIconDark from "./Assets/Ream_icon_dark.png";
 import ReamStatic from "./Assets/Ream_hero_static.png";
@@ -37,15 +39,30 @@ export default function Ream2() {
     <>
       <div className="relative isolate overflow-hidden px-8  py-32 lg:px-8">
         <div className="mx-auto max-w-3xl 2xl:max-w-4xl text-base leading-7 text-gray-200">
-          <div className="flex  items-center">
-            <img
-              alt=""
-              src={ReamIconDark}
-              className=" max-w-[50px]  max-h-[50px] rounded-lg bg-gray-900 shadow-xl ring-1 ring-gray-400/10 "
-            />
-            <h1 className=" ml-3 text-2xl  font-bold tracking-tight text-gray-50 sm:text-4xl">
-              Ream Digital Receipts{" "}
-            </h1>
+          <div className="flex w-full items-center justify-between ">
+            <div className="flex  items-center">
+              <img
+                alt=""
+                src={ReamIconDark}
+                className=" max-w-[50px]  max-h-[50px] rounded-lg bg-gray-900 shadow-xl ring-1 ring-gray-400/10 "
+              />
+              <h1 className=" ml-3 text-2xl  font-bold tracking-tight text-gray-50 sm:text-4xl">
+                Ream Digital Receipts{" "}
+              </h1>
+            </div>
+            <div className="h-full flex align-middle justify-center ">
+              <Link
+                to="https://reamreceipts.com"
+                target="_blank"
+                className="inline-flex  gap-x-1 rounded-md max-h-[40px] bg-green-500/80 p-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400"
+              >
+                <span className="hidden sm:block">Open</span>
+                <ArrowTopRightOnSquareIcon
+                  aria-hidden="true"
+                  className="ml-0.5 h-5 w-5 flex-none text-white"
+                />
+              </Link>
+            </div>
           </div>
           <p className="mt-6 text-xl leading-8">
             This is the very first project I started back in 2019, and through

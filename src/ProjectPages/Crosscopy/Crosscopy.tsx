@@ -1,20 +1,21 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import {
   InformationCircleIcon,
   CloudArrowUpIcon,
   LockClosedIcon,
   ServerIcon,
+  ArrowTopRightOnSquareIcon,
 } from "@heroicons/react/20/solid";
-import { useEffect } from "react";
-
-import CrossCopyIcon from "./Assets/CC_ICON.png";
-
-import HomepageImage1 from "./Assets/CC_homepage.png";
-
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import {  SiJavascript, SiStyledcomponents } from "react-icons/si";
+import { SiJavascript, SiStyledcomponents } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 
+import CrossCopyIcon from "./Assets/CC_ICON.png";
+import HomepageImage1 from "./Assets/CC_homepage.png";
 import CrosscopyWeb from "./CrosscopyWeb";
+import CrosscopApp from "./CrosscopyApp";
 
 const stack = [
   { name: "Javascript", icon: SiJavascript },
@@ -41,22 +42,36 @@ export default function Crosscopy() {
       {/* <Navbar open={open} setOpen={setOpen} /> */}
       <div className="relative isolate overflow-hidden px-6 py-32 lg:px-8">
         <div className="mx-auto max-w-3xl 2xl:max-w-4xl text-base leading-7 text-gray-200">
-          <div className="inline-flex align-middle justify-center">
-            <img
-              alt=""
-              src={CrossCopyIcon}
-              className=" max-w-[50px] rounded-lg bg-gray-900 shadow-xl ring-1 ring-gray-400/10 "
-            />
-            <h1 className="mt-1 ml-3 text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
-              Cross Copy
-            </h1>
+          <div className="flex w-full items-center justify-between ">
+            <div className="inline-flex align-middle justify-center">
+              <img
+                alt=""
+                src={CrossCopyIcon}
+                className=" max-w-[50px] rounded-lg bg-gray-900 shadow-xl ring-1 ring-gray-400/10 "
+              />
+              <h1 className="mt-1 ml-3 text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
+                Cross Copy
+              </h1>
+            </div>
+            <div className="h-full flex align-middle justify-center ">
+              <Link
+                to="https://crosscopy.dev"
+                target="_blank"
+                className="inline-flex  gap-x-1 rounded-md max-h-[40px] bg-green-500/80 p-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400"
+              >
+                <span className="hidden sm:block">Open</span>
+                <ArrowTopRightOnSquareIcon
+                  aria-hidden="true"
+                  className="ml-0.5 h-5 w-5 flex-none text-white"
+                />
+              </Link>
+            </div>
           </div>
           <p className="mt-6 text-xl leading-8">
             At it's core, Cross Copy just provides a simple way to avoid having
             to email text and files to yourself. It works in a similar way to
             Google Drive or Dropbox, but without the bloat of folders,
-            subscriptions, or size limits. This is by far my most used project,
-            which myself and hundreds of others use daily.
+            subscriptions, or size limits.
           </p>
           <div className=" z-10 rounded-xl flex no-scrollbar items-center gap-x-2 overflow-x-scroll  h-[50px]">
             {stack.map((item, index) => (
@@ -164,6 +179,7 @@ export default function Crosscopy() {
             </ul>
           </div>
           <CrosscopyWeb />
+          <CrosscopApp />
         </div>
       </div>
     </>

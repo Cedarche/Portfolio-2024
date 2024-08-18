@@ -26,12 +26,12 @@ export default function SnapparkApp() {
       <figure className="mt-8">
         <div className="relative mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
           {/* Video only for mobile */}
-          <div className="block sm:hidden rounded-[45px] p-2  bg-gray-400/80">
+          <div className="sm:hidden flex items-center justify-center rounded-[45px] p-3  bg-gray-400/80">
             <video
               src={SnapparkAppDemo}
               className="w-full h-full max-w-[316px] max-h-[684px] rounded-[35px] shadow-xl"
               loop
-              autoPlay
+              // autoPlay
               muted
             />
           </div>

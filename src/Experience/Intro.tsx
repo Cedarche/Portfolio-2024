@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CiLinkedin } from "react-icons/ci";
-import Resume from "/TomCarruthers_Resume_2024.pdf";
+import Headshot from "/Headshot.jpg";
 
 import { IconLink } from "./IconLink"; // Adjust the path as needed
 
@@ -21,12 +21,17 @@ function GitHubIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-
 export function Intro() {
   return (
     <div className="no-scrollbar">
+      <div className="mt-6">
+        <img
+          src={Headshot}
+          className="rounded-full border-2 border-green-300 max-w-[250px] h-[250px] object-cover"
+        />
+      </div>
       <div id="about">
-        <h1 className="mt-14  font-display text-2xl/tight font-light text-white">
+        <h1 className="mt-8  font-display text-2xl/tight font-light text-white">
           About Me
         </h1>
         <p className="mt-4 text-sm/6 text-gray-300">

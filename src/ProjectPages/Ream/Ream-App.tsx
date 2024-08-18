@@ -21,7 +21,7 @@ export default function ReamApp() {
         application installed.
       </p>
 
-      <figure className="mt-16">
+      <figure className="mt-8">
         <div className="relative mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
           {/* Video only for mobile */}
           <div className="block sm:hidden rounded-[45px] p-2  bg-gray-400/80">
@@ -29,7 +29,7 @@ export default function ReamApp() {
               src={ReamAppDemo}
               className="w-full h-full max-w-[316px] max-h-[684px] rounded-[35px] shadow-xl"
               loop
-              autoPlay
+              // autoPlay
               muted
             />
           </div>
