@@ -7,7 +7,11 @@ import {
   DialogPanel,
   TransitionChild,
 } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon, LightBulbIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3Icon,
+  XMarkIcon,
+  LightBulbIcon,
+} from "@heroicons/react/24/outline";
 import { CiLinkedin } from "react-icons/ci";
 import {
   HomeIcon,
@@ -35,39 +39,6 @@ const fadeIn = {
   },
 };
 
-const navigation = [
-  {
-    name: "Ream",
-    id: 1,
-    href: "/projects/ream",
-    external_url: "https://ream-1.web.app/",
-    current: false,
-  },
-  {
-    name: "Snap Park",
-    id: 0,
-    href: "/projects/snappark",
-    external_url: "snappark.co",
-  },
-  {
-    name: "Cross Copy",
-    id: 2,
-    href: "/projects/crosscopy",
-    external_url: "crosscopy.dev",
-  },
-  {
-    name: "Assetrix",
-    id: 3,
-    href: "/projects/assetrix",
-    external_url: "/",
-  },
-  {
-    name: "Stellarmetrics",
-    id: 4,
-    href: "/projects/stellarmetrics",
-    external_url: "/",
-  },
-];
 const links = [
   {
     id: 1,
@@ -217,8 +188,7 @@ export default function Navbar({ children }: LayoutProps) {
                                 <team.icon
                                   className="h-4 w-4"
                                   aria-hidden="true"
-                                />{" "}
-                                {/* Display the icon */}
+                                />
                               </span>
                               <span className="truncate">{team.name}</span>
                             </Link>
@@ -226,7 +196,6 @@ export default function Navbar({ children }: LayoutProps) {
                         ))}
                       </ul>
                     </li>
-               
                   </ul>
                 </nav>
               </div>
@@ -283,3 +252,37 @@ export default function Navbar({ children }: LayoutProps) {
     </>
   );
 }
+
+// const navigation = [
+//   {
+//     name: "Ream",
+//     id: 1,
+//     href: "/projects/ream",
+//     external_url: "https://ream-1.web.app/",
+//     current: false,
+//   },
+//   {
+//     name: "Snap Park",
+//     id: 0,
+//     href: "/projects/snappark",
+//     external_url: "snappark.co",
+//   },
+//   {
+//     name: "Cross Copy",
+//     id: 2,
+//     href: "/projects/crosscopy",
+//     external_url: "crosscopy.dev",
+//   },
+//   {
+//     name: "Assetrix",
+//     id: 3,
+//     href: "/projects/assetrix",
+//     external_url: "/",
+//   },
+//   {
+//     name: "Stellarmetrics",
+//     id: 4,
+//     href: "/projects/stellarmetrics",
+//     external_url: "/",
+//   },
+// ];

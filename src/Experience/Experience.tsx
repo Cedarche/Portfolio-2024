@@ -3,7 +3,7 @@ import React, { useId } from "react";
 import { Intro, IntroFooter } from "./Intro";
 import { StarField } from "./Starfield";
 import Article from "./JobArticle";
-import Navbar2 from "../Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import ReactMarkdown from "react-markdown";
 
 const articles = [
@@ -137,7 +137,7 @@ type FixedSidebarProps = {
   footer: React.ReactNode;
 };
 
-function FixedSidebar({ main, footer }: FixedSidebarProps) {
+function FixedSidebar({ main }: FixedSidebarProps) {
   return (
     <div className="relative no-scrollbar flex-none overflow-hidden px-6 lg:pointer-events-none lg:fixed lg:inset-0 lg:z-40 lg:flex lg:px-0">
       <Glow />
@@ -192,7 +192,7 @@ function ArticleContent({ company, title, location, dates, content }) {
 
 function Experience() {
   return (
-    <Navbar2>
+    <Navbar>
       <FixedSidebar main={<Intro />} footer={<IntroFooter />} />
       <div className="relative flex-auto no-scrollbar">
         <Timeline />
@@ -210,7 +210,7 @@ function Experience() {
           ))}
         </main>
       </div>
-    </Navbar2>
+    </Navbar>
   );
 }
 

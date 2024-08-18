@@ -9,7 +9,6 @@ import Stellarmetrics from "./Stellarmetrics/Stellarmetrics";
 import { CiSatellite1, CiLinkedin } from "react-icons/ci";
 import {
   HomeIcon,
-  DocumentIcon,
   BellIcon,
   DocumentChartBarIcon,
 } from "@heroicons/react/20/solid";
