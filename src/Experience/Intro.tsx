@@ -27,7 +27,7 @@ export function Intro() {
       <div className="mt-6">
         <img
           src={Headshot}
-          className="rounded-full border-2 border-green-300 max-w-[250px] h-[250px] object-cover"
+          className="rounded-full border-2 border-green-300 max-w-[200px] h-[200px] lg:max-w-[250px] lg:h-[250px] object-cover"
         />
       </div>
       <div id="about">
@@ -43,10 +43,10 @@ export function Intro() {
           <br />
           <br />
           Over the past 4 years I've spent much of my spare time learning and
-          building out various ideas and software projects. While I realise that
+          building out various ideas and software projects. While I realize that
           most of my experience lends itself to more mechanical roles, I'm
           hoping my portfolio of React/React-Native projects might be enough to
-          convice you.
+          convince you.
         </p>
       </div>
       <div id="Education" className="w-full border-t border-gray-50/40 mt-10">
@@ -110,7 +110,7 @@ export function Intro() {
           In Australia I participated as part of a competitive yacht racing
           team; competing in races such as the Brisbane to Gladstone, Brisbane
           to Hamilton, and the 2019 Sydney to Hobart, etc. I’m a keen
-          snowboarder in the winter, and I enjoy hiking and mountainbiking in
+          snowboarder in the winter, and I enjoy hiking and mountain biking in
           the summer.
         </p>
       </div>

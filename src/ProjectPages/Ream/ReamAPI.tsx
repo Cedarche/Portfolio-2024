@@ -80,7 +80,7 @@ createReceipt();`;
           Ream API
         </h2>
         <p className="mt-6">
-          The Ream backend API is the start point of any digitial receipt. Once
+          The Ream backend API is the start point of any digital receipt. Once
           an in-store order has been placed, the POS system will send a POST
           request to the Public API endpoint with the details of the receipt and
           their API Key. If the store is using Tiles in their WiFi
@@ -95,7 +95,7 @@ createReceipt();`;
         <p className="mt-6">
           The Ream backend API is written in Typescript using the Node.js
           Express framework. It's hosted on multiple AWS Lambda instances for
-          simplicity and scaleability using <code>aws-serverless-express</code>.
+          simplicity and scalability using <code>aws-serverless-express</code>.
           It includes external endpoints that handle actions such as receipt
           generation, device (Ream Tile) registration, API Key requests etc. as
           well as dozens of internal endpoints.

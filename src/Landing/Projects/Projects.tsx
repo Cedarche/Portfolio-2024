@@ -66,7 +66,7 @@ const articles: Article[] = [
     internalURL: "/projects/crosscopy",
 
     description:
-      "Cross Copy is a simply cross-platform application I built to quickly transfer text and files without the hassel or complexity of Dropbox or Google Drive. You can share photos, videos, and files natively on your mobile device - then instantly access them on any of your other devices.",
+      "Cross Copy is a simply cross-platform application I built to quickly transfer text and files without the hassle or complexity of Dropbox or Google Drive. You can share photos, videos, and files natively on your mobile device - then instantly access them on any of your other devices.",
     stack: [
       { name: "Javascript", icon: SiJavascript },
       { name: "React", icon: FaReact },
@@ -101,7 +101,7 @@ const articles: Article[] = [
     internalURL: "/projects/assetrix",
 
     description:
-      "Assetrix is an internal asset tracking system that uses QR Codes to track the location, P&ID, ISO number for industrial equipment. It was built specifically for a client at my previous job in order to keep track of the decomissioning of a complex gas compressor station and is still in use today.",
+      "Assetrix is an internal asset tracking system that uses QR Codes to track the location, P&ID, ISO number for industrial equipment. It was built specifically for a client at my previous job in order to keep track of the decommissioning of a complex gas compressor station and is still in use today.",
 
     stack: [
       { name: "Typescript", icon: SiTypescript },

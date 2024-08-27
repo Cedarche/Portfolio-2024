@@ -37,7 +37,7 @@ As a project manager for an engineering consultancy, I oversaw the successful de
 While studying I completed two internships with a mechanical design firm that specialized in industrial machinery installations. My key responsibilities included:
   - On-site walkthroughs to record locations and dimensions of existing equipment.
   - Solidworks design of simple parts (brackets, hangers, plates, etc.), and drafting of more complex parts for fabrication to Australian standards.
-  - Working with fabricators to have parts manufactured within specificied tolerances (laser cutting, CNC machining etc.)
+  - Working with fabricators to have parts manufactured within specified tolerances (laser cutting, CNC machining etc.)
   - Assisting contractors and the project manager with the installation of new machinery.
  `,
   },
@@ -50,7 +50,7 @@ While studying I completed two internships with a mechanical design firm that sp
     dates: "Dec 2013 - Dec 2018",
     content: `
 During university, I worked part-time within a team of roofers, cladding commercial buildings across Queensland. Including a wide variety of job sites: military barracks, mine sites, grain silos, apartment blocks, etc.
-  - Working safetly within a team in dangerous conditions.
+  - Working safely within a team in dangerous conditions.
   - Unloading, carrying, and installing heavy tin roofsheets across perlons while wearing a safety harness.
   - Working out of elevated work platforms such as Boom lifts and Scissor lifts.
   - General workplace tidying.

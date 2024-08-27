@@ -104,7 +104,7 @@ export default function Stellarmetrics() {
             A common issue that we used to run into at my previous job was
             remote data monitoring. The majority of our work site were in
             extremely remote areas without mobile coverage; during operations we
-            would often have a generator, and satelite internet (Starlink) set
+            would often have a generator, and satellite internet (Starlink) set
             up to provide telemetry.
           </p>
           <div className=" z-10 rounded-xl flex no-scrollbar items-center gap-x-2 overflow-x-scroll  h-[50px]">
@@ -139,12 +139,12 @@ export default function Stellarmetrics() {
               data collection. It's uneconomical to leave a leave a generator on
               site just to power a single Starlink, not to mention maintenance
               and refuelling. What we had been using perviously was mobile
-              satellite monitering systems that came with a long-term battery.
+              satellite monitoring systems that came with a long-term battery.
               However these were bulky (had to be towed in on a trailer), and
               extremely expensive.
               <br />
               <br />
-              Once on-site activites have ceased, the amount of data that needs
+              Once on-site activities have ceased, the amount of data that needs
               to be transferred is relatively small, think wellhead pressure
               readings, tank water levels, salinity, temperature, etc. A
               coworker and I decided that we could provide semi-realtime data
@@ -157,7 +157,7 @@ export default function Stellarmetrics() {
               >
                 SWARM
               </a>{" "}
-              satellite network - and specifially the Swarm M138 Modem.
+              satellite network - and specifically the Swarm M138 Modem.
               <br />
               <br />
               The Swarm modem would allow us to offer global satellite
@@ -168,7 +168,7 @@ export default function Stellarmetrics() {
               remote areas are not located next to each other, and are often
               spread out over several kilometers. I had the idea to have a
               single <span className="italic">Hub</span> that act as a LoRa
-              gateway, as well as a transciever for the Swarm network. Each
+              gateway, as well as a transceiver for the Swarm network. Each
               asset would then be equipped with a LoRa{" "}
               <span className="italic">Node</span> that would transmit data to
               the Hub. The Hub would then collate the data into a single packet
@@ -227,7 +227,7 @@ export default function Stellarmetrics() {
               <br />
               <br /> The Swarm network provides an API interface which you can
               setup a webhook to listen for new incoming messages. I ended up
-              building a simple backend to listen to changes in the webook, and
+              building a simple backend to listen to changes in the webhook, and
               save the data into a database. I then built a dashboard with react
               to display everything, which I talk about later.
               <br />
@@ -272,7 +272,7 @@ export default function Stellarmetrics() {
               <li className="mt-2">An IP-67 rated housing.</li>
             </ul>
             <p className="mt-4 w-full">
-              You can see examples of the housing I came up with below, whcih
+              You can see examples of the housing I came up with below, which
               include 4x I2C or PWM inputs, 2 antenna ports, a power in port, a
               GPS module, indicator lights, and a TFT Screen.
             </p>
@@ -377,7 +377,7 @@ export default function Stellarmetrics() {
             work in practice due to interference, but it certainly makes the
             model look cooler. The Swarm network provides an API interface which
             you can setup a webhook to listen for new incoming messages. I ended
-            up building a simple backend to listen to changes in the webook, and
+            up building a simple backend to listen to changes in the webhook, and
             save the data into a database.
           </p>
           <StellarmetricsWeb />

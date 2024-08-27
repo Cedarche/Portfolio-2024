@@ -38,10 +38,10 @@ export default function CrosscopyWeb() {
       </figure>
       <p className="mt-8">
         Anything added to the homepage is instantly synced to their account, and
-        is availabile in the browser, app, and chrome extension on any device.
+        is available in the browser, app, and chrome extension on any device.
         There is no compression or restriction on what kind of file can be
         transferred which is great when you need full resolution images. There
-        is currently a limiti of 500MB per file though.
+        is currently a limit of 200MB per file though.
       </p>
       <figure className=" border-gray-200   overflow-hidden rounded-xl mt-8">
         <svg

@@ -204,29 +204,29 @@ export default function Assetrix() {
           <div className="mt-10  max-w-3xl 2xl:max-w-4xl">
             <p>
               One of our primary clients had been in discussions with a major
-              power company to purchase a decomissioned gas compressor station
+              power company to purchase a decommissioned gas compressor station
               that had already started to be dismantled. The plant still had
               years of use left, and the client intended to repurpose the
               equipment for a new gas field they were developing. While we had
               the original construction plans, ISO's and P&IDs, we quickly
-              realised that once it had been dissassembled it would be
+              realized that once it had been disassembled it would be
               incredibly difficult to identify the thousands of components -
               piping, valves, instruments, supports, and machinery. If we wanted
               to have any chance at reassembling the compressor station, we
               needed a comprehensive inventory management system.
               <br />
               <br />
-              However time was not on our side; the decomissioning had already
+              However time was not on our side; the decommissioning had already
               begun when it was purchased and we essentially had 3 business days
               to get some sort of asset tracking system in place. Our first
               thought was to use an established, industry specific asset
-              managment tool, which are quite common. When I contacted several
+              management tool, which are quite common. When I contacted several
               providers I was told that the lead time to get set-up was in the
               order of weeks, not days.
               <br />
               <br />
               I volunteered to build a system that would hopefully get us
-              accross the line so we at least had some kind of record of how
+              across the line so we at least had some kind of record of how
               everything was put together. The client approved our request on
               Wednesday morning, by lunchtime I had ordered 2000 generic QR code
               stickers/tags incremented from 000001 to 002000 that would be
@@ -297,17 +297,17 @@ export default function Assetrix() {
             <p className="mt-8">
               On Monday the next week, myself and another engineer from the team
               flew out to site and spent the next 3 weeks meticulously going
-              through the original plans and marking every relavent piece of
+              through the original plans and marking every relevant piece of
               equipment on the site.
               <br />
               <br />
               We divided the compressor station into super structures
               (Compressor 1, TEG Unit, Flare, etc.) and assigned each of these a
               color. When placing a QR code sticker, we also placed a dot of
-              spray paint that corresponded with the relavent section. As the
-              plant was being dissassembled and temporarily placed in a laydown
+              spray paint that corresponded with the relevant section. As the
+              plant was being disassembled and temporarily placed in a laydown
               yard for storage, we wanted to make sure that all related pieces
-              were placed in the same spot. Of course it isnt that simply, with
+              were placed in the same spot. Of course it isn't that simply, with
               multiple systems being interconnected which you can see in the
               Inventory page example above, where the super structures often
               have 2 or more colours attached to them.
@@ -368,14 +368,14 @@ export default function Assetrix() {
 
             <div className="mt-8 ">
               <p className="mt-6">
-                We used heavyduty all-weather stickers for the QR codes with the
+                We used heavy duty all-weather stickers for the QR codes with the
                 intent that when the compressor station is reconstructed in Q4
                 2024, the engineers and construction crew will be able to scan a
                 piece of equipment, and know exactly where it is meant to go.
               </p>
               <p className="mt-6">
                 The app is still in regular use at my previous company to help
-                organise equipment refurbishment. I havent made either the code
+                organise equipment refurbishment. I haven't made either the code
                 or the app itself public as it is technically not my property -
                 being built on company time.
               </p>

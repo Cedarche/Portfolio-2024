@@ -112,25 +112,25 @@ export default function Ream2() {
               transaction statements were not enough. I found it astounding that
               in 2019, there was no direct interface between the Point of Sale
               (POS) systems and the payment processing providers for receipt
-              data that wasnt just the sales total.
+              data that wasn't just the sales total.
               <br />
               <br />
               So I decided I would try and build a solution. My initial idea was
               some kind of middleware that would integrate with existing POS
               software and the customer's banking app to provide an interface
               for the receipt data mentioned above (I still think this is the
-              best solution). However, I quickly realised that I wasn't equipped
+              best solution). However, I quickly realized that I wasn't equipped
               to handle a project with that sort of complexity, especially since
               I didn't yet know how to code.
               <br />
               <br />
               My next solution was a physical device (think Square Card Reader)
-              that would sit on a businesses countertop and emulate a standard
+              that would sit on a businesses counter top and emulate a standard
               bluetooth receipt printer. When a customer made a purchase, their
               receipt would be 'printed' to the device which I named the Ream
               Tile, which would then make a request to my backend, storing all
-              necessariy information, and returning with a URL. The customer
-              then taps the Tile with an NFC enabled mobilephone, opens the URL,
+              necessary information, and returning with a URL. The customer
+              then taps the Tile with an NFC enabled mobile phone, opens the URL,
               and can view/store the digital receipt.
               <br />
               <br />

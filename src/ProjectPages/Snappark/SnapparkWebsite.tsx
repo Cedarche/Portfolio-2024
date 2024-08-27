@@ -54,7 +54,7 @@ export default function SnapparkWebsite() {
         generate new QR Code stickers, add to or edit the notification list, and
         view the activity for each parking spot. A common concern I had is that
         there is theoretically nothing stopping someone from marking a parking
-        spot as taken before arriving at work. I aleviated this by saving an
+        spot as taken before arriving at work. I alleviated this by saving an
         employee's name and mobile number in their devices local storage, then
         sending it along side the request to mark the spot taken. This allows
         the company to see who took which spot and at which time.

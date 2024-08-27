@@ -11,7 +11,7 @@ export default function SnapparkApp() {
       <p className="mt-6">
         One of the main issues with the Snap Park system is the cost of text
         messages. Even the cheapest providers charge around $0.08 AUD/message,
-        which doesnt sound like much, but when sending 3 texts per day, to 20
+        which doesn't sound like much, but when sending 3 texts per day, to 20
         individuals, adds up to quite a lot over a month. The simple solution is
         to have employees download a mobile application and link their account
         to their office. This would allow for notifications to be sent
@@ -86,8 +86,8 @@ export default function SnapparkApp() {
         and Facebook to make it as accessible as possible for users.
       </p>
       <p className="mt-6">
-        While the Snap Park web application is live and used by a handfull of
-        companies, I unfortunately havent been able to get the native
+        While the Snap Park web application is live and used by a handful of
+        companies, I unfortunately haven't been able to get the native
         application across the line with the Apple App Store. Despite the fact
         that the mobile app is designed to be completely free to use by
         employees, Apple does not like the fact that the employee's account must

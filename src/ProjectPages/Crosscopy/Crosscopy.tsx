@@ -129,7 +129,7 @@ export default function Crosscopy() {
               <br />
               It uses Firebase Authentication, Storage, and Firestore, which are
               accessed directly on the client side using carefully set rules.
-              All of the source code is available on my Github.
+              All of the source code is available on my <a href="https://github.com/Cedarche/CrossCopy" target="_blank">GitHub</a>.
               <br />
               <br />
             </p>

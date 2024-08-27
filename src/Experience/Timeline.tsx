@@ -3,13 +3,12 @@ import React, { useId } from "react";
 export function Timeline() {
   const id = useId();
 
-  // Example dates for the timeline
   const dates = [
-    { date: "Jan 2020", position: 0 }, // Start
-    { date: "Jun 2020", position: 25 }, // Quarter-way
-    { date: "Jan 2021", position: 50 }, // Halfway
-    { date: "Jun 2021", position: 75 }, // Three-quarter way
-    { date: "Jan 2022", position: 100 }, // End
+    { date: "Jan 2020", position: 0 }, 
+    { date: "Jun 2020", position: 25 }, 
+    { date: "Jan 2021", position: 50 }, 
+    { date: "Jun 2021", position: 75 }, 
+    { date: "Jan 2022", position: 100 }, 
   ];
 
   return (
@@ -33,11 +32,11 @@ export function Timeline() {
         {dates.map((date, index) => (
           <text
             key={index}
-            x="20" // Position the text further to the right of the timeline line
-            y={`${date.position}%`} // Position based on the percentage
+            x="20" 
+            y={`${date.position}%`}
             fill="white"
             className="text-xs"
-            style={{ transform: `translateY(-50%)`, zIndex: 60 }} // Center the text vertically
+            style={{ transform: `translateY(-50%)`, zIndex: 60 }}
           >
             {date.date}
           </text>
