@@ -47,8 +47,11 @@ const Hero: React.FC = () => {
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-100 sm:max-w-md lg:max-w-none text-left 2xl:text-2xl">
               I'm a mechanical engineer by profession, but I love to build
-              anything and everything - from software to hardware. I've built a number of both personal and commercial projects over the years, and I'm currently
-              looking to change careers into front-end/fullstack software engineering.
+              anything and everything - from software to hardware. I've built a
+              number of both personal and commercial projects over the years,
+              and I'm currently looking for work in London, UK as either an
+              Mechanical Project Engineer, or a front-end/fullstack software
+              engineering.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <Link
