@@ -49,9 +49,8 @@ const Hero: React.FC = () => {
               I'm a mechanical engineer by profession, but I love to build
               anything and everything - from software to hardware. I've built a
               number of both personal and commercial projects over the years,
-              and I'm currently looking for work in London, UK as either an
-              Mechanical Project Engineer, or a front-end/fullstack software
-              engineering.
+              and I'm currently looking for work in London, UK as a front-end/fullstack software
+              engineer.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <Link
