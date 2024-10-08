@@ -19,11 +19,12 @@ import StellarmetricsMobile from "/Stellarmetrics_mobile.png";
 import { CiSatellite1 } from "react-icons/ci";
 import Assetrix1 from "/Assetrix_1.jpeg";
 import Assetrix2 from "/Assetrix_2.jpeg";
+import AssetrixMov from "../../ProjectPages/Assetrix/Assets/Assetrix_example.mov";
 
 const assetrixImages = [
   { name: "Assetrix 1", image: Assetrix1 },
   { name: "Assetrix 2", image: Assetrix2 },
-  { name: "Assetrix 3", image: Assetrix2 },
+  { name: "AssetrixMov", image: AssetrixMov },
 ];
 
 const START_INDEX = 0;
@@ -44,7 +45,7 @@ interface Article {
 const articles: Article[] = [
   {
     title: "Ream",
-    url: "/",
+    url: "https://reamreceipts.com/",
     internalURL: "/projects/ream",
     description:
       "Ream is an end-to-end digital receipt system aimed at both enterprises and consumers. It consists of Web & Native Mobile applications, and a hardware component, the Ream Tile, for which I designed the PCB and housing from the ground up.",
@@ -62,7 +63,7 @@ const articles: Article[] = [
   },
   {
     title: "Cross Copy",
-    url: "/",
+    url: "https://crosscopy.dev/",
     internalURL: "/projects/crosscopy",
 
     description:
@@ -111,10 +112,6 @@ const articles: Article[] = [
       { name: "PostgreSQL", icon: DiPostgresql },
       { name: "Firebase", icon: IoLogoFirebase },
     ],
-    // images: [
-    //   { name: "Assetrix1", image: Assetrix1 },
-    //   { name: "Assetrix1", image: Assetrix1 },
-    // ],
     imageWeb: ReamWeb,
     imageMobile: ReamMobile,
   },
@@ -299,13 +296,15 @@ const Projects: React.FC = () => {
               </svg>
             </div>
             <div className="inline-flex align-middle mt-3 justify-start w-full">
-              <Link
-                to={article.url}
-                className="rounded inline-flex items-center gap-x-2 bg-green-500 px-2 py-1 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
-              >
-                Open
-                <FiExternalLink />
-              </Link>
+              {(article.title === "Ream" || article.title === "Cross Copy") && (
+                <Link
+                  to={article.url}
+                  className="rounded inline-flex items-center gap-x-2 bg-green-500 px-2 py-1 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
+                >
+                  Open
+                  <FiExternalLink />
+                </Link>
+              )}
               <Link
                 to={article.internalURL}
                 className="ml-3 text-center inline-flex gap-x-1 items-center text-sm"
@@ -371,12 +370,48 @@ const Projects: React.FC = () => {
                     <div className="text-xl font-bold text-blue-200 relative max-h-full inset-0">
                       {article.title === "Assetrix" ? (
                         <div className="flex justify-between absolute inset-6 space-x-4 px-6">
-                          {assetrixImages.map(
-                            (item, i) => (
-                              <div
-                                key={i}
-                                className=" border-gray-200 overflow-hidden rounded-xl h-[95%] aspect-[9/18.5]"
-                              >
+                          {assetrixImages.map((item, i) => (
+                            <div
+                              key={i}
+                              className=" border-gray-200 overflow-hidden rounded-xl h-[95%] aspect-[9/18.5]"
+                            >
+                              {item.name === "AssetrixMov" ? (
+                                <div className="relative ">
+                                  <svg
+                                    role="img"
+                                    viewBox="0 0 366 729"
+                                    className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
+                                  >
+                                    <title>Assetrix App demo</title>
+                                    <defs>
+                                      <clipPath id="clipPath">
+                                        <rect
+                                          rx={36}
+                                          width={316}
+                                          height={684}
+                                        />
+                                      </clipPath>
+                                    </defs>
+                                    <path
+                                      d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z"
+                                      fill="#4B5563"
+                                    />
+                                    <path
+                                      d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
+                                      fill="#343E4E"
+                                    />
+                                  </svg>
+                                  <div className="absolute inset-0 flex items-center justify-center">
+                                    <video
+                                      src={AssetrixMov}
+                                      className="max-w-full  max-h-[95%] rounded-[35px] shadow-xl"
+                                      loop
+                                      autoPlay
+                                      muted
+                                    />
+                                  </div>
+                                </div>
+                              ) : (
                                 <svg
                                   role="img"
                                   viewBox="0 0 366 729"
@@ -396,6 +431,7 @@ const Projects: React.FC = () => {
                                     d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
                                     fill="#343E4E"
                                   />
+
                                   <foreignObject
                                     width={316}
                                     height={684}
@@ -410,9 +446,9 @@ const Projects: React.FC = () => {
                                     />
                                   </foreignObject>
                                 </svg>
-                              </div>
-                            )
-                          )}
+                              )}
+                            </div>
+                          ))}
                         </div>
                       ) : (
                         <>

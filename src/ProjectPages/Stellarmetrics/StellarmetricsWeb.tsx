@@ -4,7 +4,7 @@ import HomepageImage from "./Assets/Stellarmetrics_homepage_2.png";
 
 export default function StellarmetricsWeb() {
   return (
-    <div className="mt-16  max-w-3xl ">
+    <div className="mt-16  max-w-3xl 2xl:max-w-4xl ">
       <h2 className="text-2xl font-bold tracking-tight text-gray-50">
         The Stellarmetrics Dashboard
       </h2>
