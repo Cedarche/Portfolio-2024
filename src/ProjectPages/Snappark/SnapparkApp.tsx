@@ -1,8 +1,12 @@
 import { InformationCircleIcon } from "@heroicons/react/20/solid";
 
 import SnapparkAppDemo from "./Assets/Snappark_App_Example.mov";
+import useMediaQuery from "../../Hooks/MediaQuery";
+
 
 export default function SnapparkApp() {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   return (
     <div id="mobile-app">
       <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-50">
@@ -31,7 +35,7 @@ export default function SnapparkApp() {
               src={SnapparkAppDemo}
               className="w-full h-full max-w-[316px] max-h-[684px] rounded-[35px] shadow-xl"
               loop
-              // autoPlay
+
               muted
             />
           </div>
@@ -63,7 +67,7 @@ export default function SnapparkApp() {
                 src={SnapparkAppDemo}
                 className="max-w-full max-h-full w-[316px] h-[684px] rounded-[35px] shadow-xl"
                 loop
-                autoPlay
+                autoPlay={!isMobile}
                 muted
               />
             </div>

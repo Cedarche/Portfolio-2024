@@ -186,7 +186,7 @@ export default function Assetrix() {
                     src={AssetrixAppDemo}
                     className="max-w-full max-h-full w-[316px] h-[684px] rounded-[35px] shadow-xl"
                     loop
-                    autoPlay
+                    autoPlay={!isMobile}
                     muted
                   />
                 </div>
