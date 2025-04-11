@@ -299,6 +299,7 @@ const Projects: React.FC = () => {
               {(article.title === "Ream" || article.title === "Cross Copy") && (
                 <Link
                   to={article.url}
+                  target="_blank"
                   className="rounded inline-flex items-center gap-x-2 bg-green-500 px-2 py-1 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
                 >
                   Open

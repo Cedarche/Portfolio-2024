@@ -13,18 +13,14 @@ const articles = [
     company: "inGauge Energy",
     title: "Mechanical Project Engineer",
     location: "Brisbane, QLD",
-    dates: "June 2019 - June 2024",
+    dates: "June 2019 - October 2024",
     content: `
-As a project manager for an engineering consultancy, I oversaw the successful design and execution of a range of projects for multiple clients, from gas well completions, civil works, and surface facilities installations.
-  - Assisted with the design, and then became the primary project manager for the installation of a new water processing facility at the Origin Darling Downs Gas Power Station. I was awarded a special commendation for my work navigating tough on-site conditions, environmental compliance, and contractor relationships.
-  - Designed and installed a deep bore dewatering system for a production gas well in the Northern territory.
-  - Executed the civil construction of a series of 5 well-pads for a multi-well drilling campaign, which included landholder access/payment negotiations and regulatory approvals.
-  - Executed the construction of a deep water well (1550m), and pump installation as the primary water supply for a remote drilling campaign.
-
- I created a series of novel solutions for problems that arose at work, including:
-  - A leak detection and water level monitoring system that utilized a satellite network to send data from remote locations in order to remain compliant with strict regulatory conditions.
-  - A QR code asset-tracking mobile application that allowed a client to accurately record the location and installation conditions of a compressor station before it was decommissioned and moved to a new location.
-    `,
+Applied technical expertise and project management capabilities to develop mobile and web applications using React and React Native to meet client requirements. Managed deployments using AWS and GCP, ensuring scalable and secure solutions. Coordinated with cross-functional teams and project timelines to deliver on time and within budget.
+  - Created a custom QR code asset-tracking mobile application using React Native and Firebase, which enabled a client to accurately record the location and installation conditions of all components within a compressor station. This solution streamlined asset management and decommissioning processes, saving the client tens of thousands of dollars.
+  - Developed Snap Park, a parking management system using React/React Native and GCP, to notify employees when the office parking lot becomes full. Further developed the application to a viable SaaS product that’s still in use today (snappark.co).
+  - Developed and deployed a leak detection and water level monitoring system using a custom ESP32 sensor unit, C++, Node.js and AWS IoT Core, and the SWARM satellite network. The system provided real-time data visualization and alerts through a web dashboard built with React, and generated daily PDF reports to ensure compliance with regulatory conditions.
+  - Engineered a predictive flood modeling tool using Python to synthesize 130 years of hourly rainfall data for a prospective exploration well location, integrating the results into QGIS for civil construction planning. The tool’s visualization capabilities supported strategic decision-making in remote areas prone to flooding.
+ `,
   },
   {
     id: "article-2",
@@ -56,7 +52,6 @@ During university, I worked part-time within a team of roofers, cladding commerc
   - General workplace tidying.
  `,
   },
- 
 ];
 
 function Timeline() {
@@ -149,7 +144,6 @@ function FixedSidebar({ main }: FixedSidebarProps) {
               {main}
             </div>
           </div>
-        
         </div>
       </div>
     </div>

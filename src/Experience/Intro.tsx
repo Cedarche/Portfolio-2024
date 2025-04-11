@@ -116,7 +116,7 @@ export function Intro() {
       </div>
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
         <IconLink
-          to="/TomCarruthers_Resume_2024.pdf"
+          to="/TC_FULLSTACK_RESUME_2025.pdf"
           target="_blank"
           icon={BookIcon}
           className="flex-none"

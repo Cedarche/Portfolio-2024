@@ -9,8 +9,8 @@ export default function Landing() {
   return (
     <Navbar>
       <Hero />
-      <ProjectFeature />
       <Skills />
+      <ProjectFeature />
       <Projects />
       <Footer />
     </Navbar>
